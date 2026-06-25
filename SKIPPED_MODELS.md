@@ -1,0 +1,55 @@
+# Skipped models
+
+These models were not scaffolded because they are likely to need complex or non-standard offline dependencies for the current PyTorch 2.7.0 + CUDA 11.8 image.
+
+- `lerobot/pi05_libero_finetuned_v044`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `lmms-lab/LLaVA-OneVision-1.5-4B-Base`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `yonigozlan/EdgeTAM-hf`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `lovis93/next-scene-qwen-image-lora-2509`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `tencent/HunyuanImage-3.0-Instruct`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `KamilaMila/FastVLM-0.5B`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `timm/vit_7b_patch16_dinov3.lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/vit_small_plus_patch16_dinov3.lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/vit_small_patch16_dinov3_qkvb.lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/vit_small_patch16_dinov3.lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/vit_large_patch16_dinov3.lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/vit_huge_plus_patch16_dinov3.lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/vit_base_patch16_dinov3.lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `HuggingFaceVLA/smolvla_libero`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `lmms-lab/LLaVA-OneVision-1.5-8B-Instruct`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `stanford-oval/churro-3B`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `timm/convnext_tiny.dinov3_lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/convnext_small.dinov3_lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/convnext_large.dinov3_lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/convnext_base.dinov3_lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/MobileCLIP2-S4-OpenCLIP`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `ibm-research/flowstate`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `ibm-granite/granite-timeseries-flowstate-r1`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `PIA-SPACE-LAB/dinov3-vitl-pretrain-lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `microsoft/VibeVoice-1.5B`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `abdur197/fine-tuned-column-mapper`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `PaddlePaddle/en_PP-OCRv5_mobile_rec`: requires non-PyTorch runtime such as ONNX/CoreML/MLX/Paddle
+- `onnx-community/bge-reranker-v2-m3-ONNX`: requires non-PyTorch runtime such as ONNX/CoreML/MLX/Paddle
+- `FluidInference/parakeet-tdt-0.6b-v3-coreml`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `istupakov/parakeet-tdt-0.6b-v3-onnx`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `mlx-community/parakeet-tdt-0.6b-v3`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `ivrit-ai/pyannote-speaker-diarization-3.1`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `facebook/dinov3-vitl16-pretrain-sat493m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `timm/naflexvit_so400m_patch16_siglip.v2_webli`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `nvidia/parakeet-tdt-0.6b-v3`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `facebook/dinov3-vit7b16-pretrain-lvd1689m`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `facebook/metaclip-2-worldwide-huge-quickgelu`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `onnx-community/all-MiniLM-L6-v2-ONNX`: requires non-PyTorch runtime such as ONNX/CoreML/MLX/Paddle
+- `numind/NuMarkdown-8B-Thinking`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `tiantiaf/voxlect-mandarin-cantonese-dialect-mms-lid-256`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `timm/PE-Core-L-14-336`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `bosonai/hubert_base`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `knowledgator/gliclass-large-v3.0`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `google/videoprism-lvt-base-f16r288`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `knowledgator/gliclass-base-v3.0`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `KRLabsOrg/verbatim-rag-modern-bert-v1`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `google/medsiglip-448`: vision backbone or timm/open-clip model; not a stable transformers.pipeline deployment target in this base image
+- `IAMJB/RadEvalModernBERT`: task/runtime unclear from local metadata; skip to avoid producing an unreliable offline service
+- `PaddlePaddle/latin_PP-OCRv5_mobile_rec`: requires non-PyTorch runtime such as ONNX/CoreML/MLX/Paddle
+- `bosonai/higgs-audio-v2-generation-3B-base`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment
+- `NeoQuasar/Kronos-mini`: multimodal/generative/specialized runtime with complex dependencies for offline PyTorch-only deployment

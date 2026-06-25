@@ -1,0 +1,74 @@
+openapi: 3.0.3
+info:
+  title: mxbai-edge-colbert-v0-32m API
+  version: 1.0.0
+  description: API for ColBERT-style query-document ranking.
+servers:
+  - url: http://localhost:8000
+paths:
+  /health:
+    get:
+      summary: Health check
+      operationId: health
+      responses:
+        "200":
+          description: Service is healthy.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+  /rank:
+    post:
+      summary: Rank documents for one query
+      operationId: rank
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RankRequest"
+      responses:
+        "200":
+          description: Documents sorted by ColBERT MaxSim score in descending order.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RankResponse"
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      required: [status, model, device]
+      properties:
+        status: {type: string, example: ok}
+        model: {type: string, example: mixedbread-ai/mxbai-edge-colbert-v0-32m}
+        device: {type: string, example: auto}
+    RankRequest:
+      type: object
+      required: [query, documents]
+      properties:
+        query:
+          type: string
+          example: capital city of China
+        documents:
+          type: array
+          minItems: 1
+          items:
+            type: string
+          example:
+            - Beijing is the capital of China.
+            - Paris is the capital of France.
+    RankResult:
+      type: object
+      required: [document, score]
+      properties:
+        document: {type: string}
+        score: {type: number, format: float}
+    RankResponse:
+      type: object
+      required: [results]
+      properties:
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/RankResult"

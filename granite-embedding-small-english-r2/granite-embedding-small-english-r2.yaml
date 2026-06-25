@@ -1,0 +1,63 @@
+openapi: 3.0.3
+info:
+  title: granite-embedding-small-english-r2 API
+  version: 1.0.0
+  description: API for text embeddings.
+servers:
+  - url: http://localhost:8000
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: Service is healthy.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+  /encode:
+    post:
+      summary: Encode texts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EncodeRequest"
+      responses:
+        "200":
+          description: Embedding vectors.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EncodeResponse"
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      required: [status, model, device]
+      properties:
+        status: {type: string, example: ok}
+        model: {type: string, example: ibm-granite/granite-embedding-small-english-r2}
+        device: {type: string, example: auto}
+    EncodeRequest:
+      type: object
+      required: [texts]
+      properties:
+        texts:
+          type: array
+          minItems: 1
+          items: {type: string}
+        normalize:
+          type: boolean
+          default: true
+    EncodeResponse:
+      type: object
+      required: [embeddings]
+      properties:
+        embeddings:
+          type: array
+          items:
+            type: array
+            items: {type: number, format: float}

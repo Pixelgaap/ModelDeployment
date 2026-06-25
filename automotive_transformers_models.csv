@@ -1,0 +1,69 @@
+model_id,pipeline_name,downloads,created_at,category,notes
+GaryFer/smart-parking-weights,object-detection,3444,2026-06-04T02:42:51.000Z,automotive-specific,smart parking object detection
+Roboflow/rf-detr-segmentation,image-segmentation,7784,2026-05-11T09:05:51.000Z,generic-automotive-usable,segmentation model usable for road and vehicle scenes
+stevenbucaille/rf-detr-seg-medium,image-segmentation,3189,2026-01-25T15:37:00.000Z,generic-automotive-usable,segmentation model usable for road and vehicle scenes
+google/siglip2-base-patch16-384,zero-shot-image-classification,91696,2025-02-17T20:01:55.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+google/siglip2-base-patch16-256,zero-shot-image-classification,239812,2025-02-17T20:01:17.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+google/siglip2-base-patch16-224,zero-shot-image-classification,374459,2025-02-17T20:00:32.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+ustc-community/dfine-nano-coco,object-detection,2617,2025-03-28T12:48:09.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+jameslahm/yoloe,object-detection,4535,2025-03-10T07:54:02.000Z,generic-automotive-usable,object detector usable for vehicle and road scenes
+ustc-community/dfine-large-coco,object-detection,3599,2025-02-22T12:04:35.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+ustc-community/dfine-small-coco,object-detection,5207,2025-02-11T14:30:13.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+PekingU/rtdetr_v2_r101vd,object-detection,7369,2025-01-31T18:14:53.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+PekingU/rtdetr_v2_r50vd,object-detection,466708,2025-01-31T18:14:46.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+PekingU/rtdetr_v2_r18vd,object-detection,102392,2025-01-31T17:10:44.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+apple/DepthPro-hf,depth-estimation,41555,2024-11-27T13:52:11.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+depth-anything/Depth-Anything-V2-Metric-Outdoor-Small-hf,depth-estimation,6146,2024-07-26T16:40:41.000Z,generic-automotive-usable,outdoor metric depth estimation for road scenes
+depth-anything/Depth-Anything-V2-Metric-Outdoor-Base-hf,depth-estimation,5074,2024-07-26T16:40:10.000Z,generic-automotive-usable,outdoor metric depth estimation for road scenes
+depth-anything/Depth-Anything-V2-Metric-Outdoor-Large-hf,depth-estimation,4853,2024-07-26T16:32:20.000Z,generic-automotive-usable,outdoor metric depth estimation for road scenes
+depth-anything/Depth-Anything-V2-Large-hf,depth-estimation,207152,2024-06-20T15:31:25.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+depth-anything/Depth-Anything-V2-Base-hf,depth-estimation,45483,2024-06-20T15:30:36.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+depth-anything/Depth-Anything-V2-Small-hf,depth-estimation,1692871,2024-06-18T10:01:15.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+IDEA-Research/dab-detr-resnet-50,object-detection,2135,2024-05-29T10:17:26.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+PekingU/rtdetr_r50vd,object-detection,67121,2024-05-29T01:36:24.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+PekingU/rtdetr_r101vd_coco_o365,object-detection,49404,2024-06-05T00:42:49.000Z,generic-automotive-usable,COCO and Objects365 detector useful for vehicle scenes
+tanganke/clip-vit-base-patch32_stanford-cars,feature-extraction,3514,2024-04-28T18:02:17.000Z,automotive-specific,Stanford Cars image embedding model
+Intel/zoedepth-nyu-kitti,depth-estimation,149723,2024-04-30T20:22:35.000Z,generic-automotive-usable,depth estimation model including KITTI-related training data
+anonauthors/stanford_cars-ConvNeXt-base,image-classification,32313,2024-04-02T03:49:28.000Z,automotive-specific,Stanford Cars vehicle model classification
+PekingU/rtdetr_r18vd,object-detection,7284,2024-05-21T13:38:11.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+PekingU/rtdetr_r18vd_coco_o365,object-detection,63467,2024-05-21T13:20:12.000Z,generic-automotive-usable,COCO and Objects365 detector useful for vehicle scenes
+PekingU/rtdetr_r50vd_coco_o365,object-detection,252177,2024-05-21T13:21:52.000Z,generic-automotive-usable,COCO and Objects365 detector useful for vehicle scenes
+LiheYoung/depth-anything-large-hf,depth-estimation,360133,2024-01-23T17:38:56.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+LiheYoung/depth-anything-base-hf,depth-estimation,50523,2024-01-22T14:34:59.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+LiheYoung/depth-anything-small-hf,depth-estimation,32763,2024-01-22T12:56:04.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+google/siglip-base-patch16-384,zero-shot-image-classification,18930,2024-01-08T12:36:57.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+google/siglip-base-patch16-256,zero-shot-image-classification,33697,2024-01-08T12:27:41.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+google/siglip-base-patch16-224,zero-shot-image-classification,1458230,2023-09-30T18:22:03.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+laion/CLIP-ViT-B-16-laion2B-s34B-b88K,zero-shot-image-classification,390794,2023-01-03T00:16:18.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+facebook/mask2former-swin-tiny-cityscapes-semantic,image-segmentation,4661,2023-01-05T13:22:45.000Z,automotive-specific,Cityscapes road scene segmentation
+facebook/mask2former-swin-tiny-cityscapes-instance,image-segmentation,5163,2023-01-05T09:27:24.000Z,automotive-specific,Cityscapes road scene segmentation
+facebook/mask2former-swin-tiny-cityscapes-panoptic,image-segmentation,3368,2023-01-03T11:41:46.000Z,automotive-specific,Cityscapes road scene segmentation
+facebook/mask2former-swin-large-cityscapes-semantic,image-segmentation,171867,2023-01-05T00:18:47.000Z,automotive-specific,Cityscapes road scene segmentation
+facebook/mask2former-swin-large-mapillary-vistas-semantic,image-segmentation,18992,2023-01-05T00:46:58.000Z,automotive-specific,Mapillary Vistas street scene segmentation
+facebook/mask2former-swin-large-mapillary-vistas-panoptic,image-segmentation,49293,2023-01-05T00:48:59.000Z,automotive-specific,Mapillary Vistas street scene segmentation
+Intel/dpt-hybrid-midas,depth-estimation,270264,2022-12-06T09:12:55.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+shi-labs/oneformer_cityscapes_swin_large,image-segmentation,40427,2022-11-15T20:24:27.000Z,automotive-specific,Cityscapes road scene segmentation
+laion/CLIP-ViT-B-32-laion2B-s34B-b79K,zero-shot-image-classification,3540274,2022-09-14T22:49:28.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+microsoft/conditional-detr-resnet-50,object-detection,18237,2022-09-09T06:11:40.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+nickmuchi/yolos-small-finetuned-license-plate-detection,object-detection,3098,2022-08-18T13:21:39.000Z,automotive-specific,license plate detection
+therealcyberlord/stanford-car-vit-patch16,image-classification,9570,2022-08-08T03:25:33.000Z,automotive-specific,Stanford Cars vehicle model classification
+hustvl/yolos-small,object-detection,741371,2022-04-26T09:38:22.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+hustvl/yolos-base,object-detection,2711,2022-04-26T09:30:39.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+hustvl/yolos-tiny,object-detection,86086,2022-04-26T09:28:47.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+openai/clip-vit-large-patch14-336,zero-shot-image-classification,2576299,2022-04-22T14:57:43.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+novakat/nerkor-cars-onpp-hubert,token-classification,2885,2022-03-02T23:29:05.000Z,automotive-specific,car-related token classification model
+facebook/detr-resnet-50,object-detection,678008,2022-03-02T23:29:05.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+facebook/detr-resnet-50-dc5,object-detection,60880,2022-03-02T23:29:05.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+facebook/detr-resnet-101,object-detection,56905,2022-03-02T23:29:05.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+facebook/detr-resnet-101-dc5,object-detection,4963,2022-03-02T23:29:05.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+SenseTime/deformable-detr,object-detection,8594,2022-03-02T23:29:05.000Z,generic-automotive-usable,COCO detector includes car truck bus motorcycle traffic light classes
+nvidia/segformer-b0-finetuned-cityscapes-512-1024,image-segmentation,15161,2022-03-02T23:29:05.000Z,automotive-specific,Cityscapes road scene segmentation
+nvidia/segformer-b0-finetuned-cityscapes-1024-1024,image-segmentation,19735,2022-03-02T23:29:05.000Z,automotive-specific,Cityscapes road scene segmentation
+nvidia/segformer-b1-finetuned-cityscapes-1024-1024,image-segmentation,2457,2022-03-02T23:29:05.000Z,automotive-specific,Cityscapes road scene segmentation
+nvidia/segformer-b2-finetuned-cityscapes-1024-1024,image-segmentation,18771,2022-03-02T23:29:05.000Z,automotive-specific,Cityscapes road scene segmentation
+nvidia/segformer-b5-finetuned-cityscapes-1024-1024,image-segmentation,132859,2022-03-02T23:29:05.000Z,automotive-specific,Cityscapes road scene segmentation
+facebook/detr-resnet-50-panoptic,image-segmentation,23576,2022-03-02T23:29:05.000Z,generic-automotive-usable,panoptic segmentation usable for vehicle and road scenes
+Intel/dpt-large,depth-estimation,49093,2022-03-02T23:29:05.000Z,generic-automotive-usable,monocular depth estimation for driving scenes
+openai/clip-vit-base-patch32,zero-shot-image-classification,23528994,2022-03-02T23:29:05.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+openai/clip-vit-base-patch16,zero-shot-image-classification,1508318,2022-03-02T23:29:05.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
+openai/clip-vit-large-patch14,zero-shot-image-classification,12017014,2022-03-02T23:29:05.000Z,generic-automotive-usable,zero-shot image classification for vehicle and road image labels
