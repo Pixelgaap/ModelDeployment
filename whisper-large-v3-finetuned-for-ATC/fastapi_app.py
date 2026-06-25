@@ -36,6 +36,19 @@ def health() -> HealthResponse:
     return HealthResponse(status="ok", model=inferencer.model_name_or_path, device=os.getenv("DEVICE", "auto"))
 
 
-@app.post("/transcribe", response_model=InferenceResponse)
+@app.post("/predict", response_model=InferenceResponse)
 def infer(request: InferenceRequest) -> InferenceResponse:
     return InferenceResponse(result=get_inferencer().run(request.input))
+
+if __name__ == "__main__":
+    import argparse
+
+    import uvicorn
+
+    parser = argparse.ArgumentParser(description="Run the FastAPI model service.")
+    parser.add_argument("--host", default="0.0.0.0", help="Service host.")
+    parser.add_argument("--port", type=int, default=8080, help="Service port.")
+    parser.add_argument("--reload", action="store_true", help="Enable uvicorn reload.")
+    args = parser.parse_args()
+    uvicorn.run("fastapi_app:app", host=args.host, port=args.port, reload=args.reload)
+

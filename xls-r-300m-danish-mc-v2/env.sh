@@ -20,4 +20,4 @@ python -m pip install \
 # export BATCH_SIZE=8
 #
 # Start service:
-# uvicorn fastapi_app:app --host 0.0.0.0 --port 8000
+# uvicorn fastapi_app:app --host 0.0.0.0 --port 8080

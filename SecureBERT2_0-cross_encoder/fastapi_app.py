@@ -5,7 +5,7 @@ from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-from infer import DEFAULT_MODEL_PATH, RerankInferencer
+from infer import DEFAULT_MODEL_PATH, EmbeddingInferencer
 
 
 class HealthResponse(BaseModel):
@@ -14,26 +14,21 @@ class HealthResponse(BaseModel):
     device: str
 
 
-class RankRequest(BaseModel):
-    query: str = Field(..., min_length=1)
-    documents: List[str] = Field(..., min_length=1)
+class InferenceRequest(BaseModel):
+    texts: List[str] = Field(..., min_length=1)
+    normalize: bool = True
 
 
-class RankResult(BaseModel):
-    document: str
-    score: float
-
-
-class RankResponse(BaseModel):
-    results: List[RankResult]
+class InferenceResponse(BaseModel):
+    embeddings: List[List[float]]
 
 
 @lru_cache(maxsize=1)
-def get_inferencer() -> RerankInferencer:
-    return RerankInferencer(os.getenv("MODEL_PATH") or os.getenv("MODEL_ID") or DEFAULT_MODEL_PATH, os.getenv("DEVICE", "auto"), int(os.getenv("BATCH_SIZE", "8")))
+def get_inferencer() -> EmbeddingInferencer:
+    return EmbeddingInferencer(os.getenv("MODEL_PATH") or os.getenv("MODEL_ID") or DEFAULT_MODEL_PATH, os.getenv("DEVICE", "auto"), int(os.getenv("BATCH_SIZE", "8")))
 
 
-app = FastAPI(title="SecureBERT2_0-cross_encoder API", version="1.0.0", description="FastAPI service for query-document reranking.")
+app = FastAPI(title='SecureBERT2_0-cross_encoder API', version="1.0.0", description="FastAPI service for text embeddings.")
 
 
 @app.get("/health", response_model=HealthResponse)
@@ -42,6 +37,19 @@ def health() -> HealthResponse:
     return HealthResponse(status="ok", model=inferencer.model_name_or_path, device=os.getenv("DEVICE", "auto"))
 
 
-@app.post("/rank", response_model=RankResponse)
-def rank(request: RankRequest) -> RankResponse:
-    return RankResponse(results=get_inferencer().rank(request.query, request.documents))
+@app.post("/predict", response_model=InferenceResponse)
+def encode(request: InferenceRequest) -> InferenceResponse:
+    return InferenceResponse(embeddings=get_inferencer().encode(request.texts, request.normalize))
+
+if __name__ == "__main__":
+    import argparse
+
+    import uvicorn
+
+    parser = argparse.ArgumentParser(description="Run the FastAPI model service.")
+    parser.add_argument("--host", default="0.0.0.0", help="Service host.")
+    parser.add_argument("--port", type=int, default=8080, help="Service port.")
+    parser.add_argument("--reload", action="store_true", help="Enable uvicorn reload.")
+    args = parser.parse_args()
+    uvicorn.run("fastapi_app:app", host=args.host, port=args.port, reload=args.reload)
+

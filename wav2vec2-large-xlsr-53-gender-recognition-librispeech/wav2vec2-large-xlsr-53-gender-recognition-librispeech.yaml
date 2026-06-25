@@ -1,0 +1,51 @@
+openapi: 3.0.3
+info:
+  title: wav2vec2-large-xlsr-53-gender-recognition-librispeech API
+  version: 1.0.0
+  description: FastAPI service for audio-classification.
+servers:
+  - url: http://localhost:8080
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: Service is healthy.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+  /predict:
+    post:
+      summary: Run audio-classification inference
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InferenceRequest"
+      responses:
+        "200":
+          description: Inference result.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InferenceResponse"
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      required: [status, model, device]
+      properties:
+        status: {type: string, example: ok}
+        model: {type: string, example: alefiury/wav2vec2-large-xlsr-53-gender-recognition-librispeech}
+        device: {type: string, example: auto}
+    InferenceRequest:
+      type: object
+      description: Request body depends on the model task. See fastapi_app.py for exact validation fields.
+    InferenceResponse:
+      type: object
+      required: [result]
+      properties:
+        result: {}

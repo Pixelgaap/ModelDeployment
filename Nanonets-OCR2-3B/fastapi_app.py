@@ -1,14 +1,15 @@
 import argparse
 import io
+import os
 from PIL import Image
 from fastapi import FastAPI, File, UploadFile, HTTPException, Query
-from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from transformers import pipeline
 
 app = FastAPI(title="Nanonets-OCR2-3B 模型服务", version="1.0.0", description="基于Nanonets-OCR2-3B模型的OCR文本识别服务")
 
 pipe = None
+DEFAULT_MODEL_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 class HealthResponse(BaseModel):
@@ -28,7 +29,7 @@ class OCRResponse(BaseModel):
 def load_model():
     global pipe
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, default="nanonets/Nanonets-OCR2-3B", help="模型路径或名称")
+    parser.add_argument("--model", type=str, default=os.getenv("MODEL_PATH", DEFAULT_MODEL_PATH), help="本地模型路径")
     parser.add_argument("--device", type=int, default=0, help="使用的GPU设备索引，-1表示CPU")
     args, _ = parser.parse_known_args()
 
@@ -58,7 +59,7 @@ async def health_check():
     )
 
 
-@app.post("/ocr", response_model=OCRResponse, tags=["OCR识别"])
+@app.post("/predict", response_model=OCRResponse, tags=["OCR识别"])
 async def ocr_inference(
     image: UploadFile = File(..., description="待识别的图像文件"),
     max_new_tokens: int = Query(512, description="生成文本的最大长度")
@@ -86,18 +87,13 @@ async def ocr_inference(
         raise HTTPException(status_code=500, detail=f"推理失败: {str(e)}")
 
 
-@app.get("/", tags=["首页"])
-async def root():
-    return {"message": "Nanonets-OCR2-3B OCR服务已启动", "docs": "/docs", "redoc": "/redoc"}
-
-
 if __name__ == "__main__":
     import uvicorn
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, default="nanonets/Nanonets-OCR2-3B", help="模型路径或名称")
+    parser.add_argument("--model", type=str, default=os.getenv("MODEL_PATH", DEFAULT_MODEL_PATH), help="本地模型路径")
     parser.add_argument("--device", type=int, default=0, help="使用的GPU设备索引，-1表示CPU")
     parser.add_argument("--host", type=str, default="0.0.0.0", help="服务监听地址")
-    parser.add_argument("--port", type=int, default=8000, help="服务监听端口")
+    parser.add_argument("--port", type=int, default=8080, help="服务监听端口")
     args = parser.parse_args()
 
     uvicorn.run(app, host=args.host, port=args.port)

@@ -5,7 +5,7 @@ from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-from infer import ColBERTInferencer, DEFAULT_MODEL_PATH
+from infer import DEFAULT_MODEL_PATH, EmbeddingInferencer
 
 
 class HealthResponse(BaseModel):
@@ -14,34 +14,21 @@ class HealthResponse(BaseModel):
     device: str
 
 
-class RankRequest(BaseModel):
-    query: str = Field(..., min_length=1)
-    documents: List[str] = Field(..., min_length=1)
+class InferenceRequest(BaseModel):
+    texts: List[str] = Field(..., min_length=1)
+    normalize: bool = True
 
 
-class RankResult(BaseModel):
-    document: str
-    score: float
-
-
-class RankResponse(BaseModel):
-    results: List[RankResult]
+class InferenceResponse(BaseModel):
+    embeddings: List[List[float]]
 
 
 @lru_cache(maxsize=1)
-def get_inferencer() -> ColBERTInferencer:
-    return ColBERTInferencer(
-        model_name_or_path=os.getenv("MODEL_PATH") or os.getenv("MODEL_ID") or DEFAULT_MODEL_PATH,
-        device=os.getenv("DEVICE", "auto"),
-        batch_size=int(os.getenv("BATCH_SIZE", "8")),
-    )
+def get_inferencer() -> EmbeddingInferencer:
+    return EmbeddingInferencer(os.getenv("MODEL_PATH") or os.getenv("MODEL_ID") or DEFAULT_MODEL_PATH, os.getenv("DEVICE", "auto"), int(os.getenv("BATCH_SIZE", "8")))
 
 
-app = FastAPI(
-    title="mxbai-edge-colbert-v0-32m API",
-    version="1.0.0",
-    description="FastAPI service for ColBERT-style query-document ranking.",
-)
+app = FastAPI(title='mxbai-edge-colbert-v0-32m API', version="1.0.0", description="FastAPI service for text embeddings.")
 
 
 @app.get("/health", response_model=HealthResponse)
@@ -50,8 +37,19 @@ def health() -> HealthResponse:
     return HealthResponse(status="ok", model=inferencer.model_name_or_path, device=os.getenv("DEVICE", "auto"))
 
 
-@app.post("/rank", response_model=RankResponse)
-def rank(request: RankRequest) -> RankResponse:
-    inferencer = get_inferencer()
-    results = inferencer.score(request.query, request.documents)
-    return RankResponse(results=results)
+@app.post("/predict", response_model=InferenceResponse)
+def encode(request: InferenceRequest) -> InferenceResponse:
+    return InferenceResponse(embeddings=get_inferencer().encode(request.texts, request.normalize))
+
+if __name__ == "__main__":
+    import argparse
+
+    import uvicorn
+
+    parser = argparse.ArgumentParser(description="Run the FastAPI model service.")
+    parser.add_argument("--host", default="0.0.0.0", help="Service host.")
+    parser.add_argument("--port", type=int, default=8080, help="Service port.")
+    parser.add_argument("--reload", action="store_true", help="Enable uvicorn reload.")
+    args = parser.parse_args()
+    uvicorn.run("fastapi_app:app", host=args.host, port=args.port, reload=args.reload)
+

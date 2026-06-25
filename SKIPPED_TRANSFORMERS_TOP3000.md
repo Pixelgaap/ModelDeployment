@@ -1,0 +1,952 @@
+# Skipped transformers_models_top3000 models
+
+These rows were not scaffolded because the CSV has no stable pipeline name or the task usually needs complex/non-standard offline runtime beyond this PyTorch 2.7.0 + CUDA 11.8 Transformers service template.
+
+- `google/electra-base-discriminator` (no pipeline): missing pipeline_name
+- `hexgrad/Kokoro-82M` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `amazon/chronos-2` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `autogluon/chronos-bolt-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Bingsu/adetailer` (no pipeline): missing pipeline_name
+- `colbert-ir/colbertv2.0` (no pipeline): missing pipeline_name
+- `coqui/XTTS-v2` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `autogluon/chronos-2` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `facebook/contriever` (no pipeline): missing pipeline_name
+- `pyannote/wespeaker-voxceleb-resnet34-LM` (no pipeline): missing pipeline_name
+- `lpiccinelli/unidepth-v2-vitl14` (no pipeline): missing pipeline_name
+- `Comfy-Org/Wan_2.2_ComfyUI_Repackaged` (no pipeline): missing pipeline_name
+- `Comfy-Org/stable-diffusion-v1-5-archive` (no pipeline): missing pipeline_name
+- `docling-project/docling-models` (no pipeline): missing pipeline_name
+- `TostAI/nsfw-image-detection-large` (no pipeline): missing pipeline_name
+- `usyd-community/vitpose-plus-base` (keypoint-detection): keypoint-detection requires complex or non-standard runtime
+- `rhasspy/faster-whisper-tiny-int8` (no pipeline): missing pipeline_name
+- `autogluon/chronos-bolt-tiny` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `NeoQuasar/Kronos-Tokenizer-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `autogluon/chronos-bolt-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `autogluon/chronos-2-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `charactr/vocos-mel-24khz` (no pipeline): missing pipeline_name
+- `Comfy-Org/z_image_turbo` (no pipeline): missing pipeline_name
+- `facebook/wav2vec2-base` (no pipeline): missing pipeline_name
+- `speechbrain/spkrec-ecapa-voxceleb` (no pipeline): missing pipeline_name
+- `Comfy-Org/Wan_2.1_ComfyUI_repackaged` (no pipeline): missing pipeline_name
+- `amazon/chronos-t5-tiny` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `amazon/chronos-t5-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Kijai/WanVideo_comfy` (no pipeline): missing pipeline_name
+- `Bingsu/yolo-world-mirror` (no pipeline): missing pipeline_name
+- `E-MIMIC/inclusively-reformulation-it5` (no pipeline): missing pipeline_name
+- `openvla/openvla-7b` (robotics): robotics requires complex or non-standard runtime
+- `stable-diffusion-v1-5/stable-diffusion-v1-5` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Lightricks/LTX-2.3` (image-to-video): image-to-video requires complex or non-standard runtime
+- `facebook/musicgen-medium` (text-to-audio): text-to-audio requires complex or non-standard runtime
+- `facebook/esmfold_v1` (no pipeline): missing pipeline_name
+- `nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4` (any-to-any): any-to-any requires complex or non-standard runtime
+- `google/mobilebert-uncased` (no pipeline): missing pipeline_name
+- `amazon/chronos-bolt-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `allenai/longformer-base-4096` (no pipeline): missing pipeline_name
+- `amazon/chronos-bolt-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `google/flan-t5-base` (no pipeline): missing pipeline_name
+- `docling-project/docling-layout-heron` (no pipeline): missing pipeline_name
+- `hustvl/vitmatte-small-composition-1k` (no pipeline): missing pipeline_name
+- `dropbox-dash/faster-whisper-large-v3-turbo` (no pipeline): missing pipeline_name
+- `stabilityai/stable-diffusion-xl-base-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `rhasspy/faster-whisper-base-int8` (no pipeline): missing pipeline_name
+- `ai21labs/Jamba-tiny-dev` (no pipeline): missing pipeline_name
+- `Rostlab/prot_t5_xl_half_uniref50-enc` (no pipeline): missing pipeline_name
+- `prithivida/parrot_paraphraser_on_T5` (no pipeline): missing pipeline_name
+- `NeoQuasar/Kronos-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `google/fnet-base` (no pipeline): missing pipeline_name
+- `Kijai/LTX2.3_comfy` (no pipeline): missing pipeline_name
+- `prajjwal1/bert-tiny` (no pipeline): missing pipeline_name
+- `microsoft/TRELLIS-image-large` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `black-forest-labs/FLUX.1-dev` (text-to-image): text-to-image requires complex or non-standard runtime
+- `microsoft/layoutlmv3-base` (no pipeline): missing pipeline_name
+- `nvidia/bigvgan_v2_22khz_80band_256x` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `apple/DFN2B-CLIP-ViT-B-16` (no pipeline): missing pipeline_name
+- `k2-fsa/OmniVoice` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `NeoQuasar/Kronos-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `amazon/chronos-bolt-tiny` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `microsoft/TRELLIS.2-4B` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `Lykon/dreamshaper-7` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Comfy-Org/flux2-dev` (no pipeline): missing pipeline_name
+- `Lightricks/LTX-2.3-fp8` (image-to-video): image-to-video requires complex or non-standard runtime
+- `SulphurAI/Sulphur-2-base` (text-to-video): text-to-video requires complex or non-standard runtime
+- `chopratejas/technique-router-onnx` (no pipeline): missing pipeline_name
+- `ai4bharat/indic-parler-tts` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `iitolstykh/mivolo_v2` (no pipeline): missing pipeline_name
+- `circlestone-labs/Anima` (no pipeline): missing pipeline_name
+- `stabilityai/sd-turbo` (text-to-image): text-to-image requires complex or non-standard runtime
+- `hubertsiuzdak/snac_24khz` (no pipeline): missing pipeline_name
+- `autogluon/chronos-bolt-mini` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `nomic-ai/CodeRankEmbed` (no pipeline): missing pipeline_name
+- `apple/DFN5B-CLIP-ViT-H-14-378` (no pipeline): missing pipeline_name
+- `allenai/unifiedqa-t5-small` (no pipeline): missing pipeline_name
+- `microsoft/VibeVoice-Realtime-0.5B` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `NeoQuasar/Kronos-mini` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `SWivid/F5-TTS` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `microsoft/VibeVoice-ASR-HF` (audio-text-to-text): audio-text-to-text requires complex or non-standard runtime
+- `stabilityai/sdxl-turbo` (text-to-image): text-to-image requires complex or non-standard runtime
+- `amazon/chronos-t5-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `microsoft/layoutlmv2-base-uncased` (no pipeline): missing pipeline_name
+- `minishlab/potion-base-8M` (no pipeline): missing pipeline_name
+- `nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16` (any-to-any): any-to-any requires complex or non-standard runtime
+- `google/flan-t5-small` (no pipeline): missing pipeline_name
+- `jinaai/jina-bert-flash-implementation` (no pipeline): missing pipeline_name
+- `facebook/m2m100_1.2B` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-gpt2` (no pipeline): missing pipeline_name
+- `jinaai/jina-embeddings-v4` (visual-document-retrieval): visual-document-retrieval requires complex or non-standard runtime
+- `circulus/canvers-ko2en-v1` (no pipeline): missing pipeline_name
+- `circulus/canvers-en2ko-v1` (no pipeline): missing pipeline_name
+- `peft-internal-testing/tiny-clip-text-2` (no pipeline): missing pipeline_name
+- `CompVis/stable-diffusion-safety-checker` (no pipeline): missing pipeline_name
+- `OpenMOSS-Team/MOSS-TTS` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `ggml-org/models-moved` (no pipeline): missing pipeline_name
+- `pyannote/embedding` (no pipeline): missing pipeline_name
+- `Comfy-Org/flux1-dev` (no pipeline): missing pipeline_name
+- `EleutherAI/pythia-70m` (no pipeline): missing pipeline_name
+- `Lightricks/LTX-2` (image-to-video): image-to-video requires complex or non-standard runtime
+- `tencent/HunyuanImage-3.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Kijai/WanVideo_comfy_fp8_scaled` (no pipeline): missing pipeline_name
+- `openbmb/VoxCPM2` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `onnx-community/Kokoro-82M-v1.0-ONNX` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `lukealonso/MiniMax-M2.7-NVFP4` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.2-klein-4B` (image-to-image): image-to-image requires complex or non-standard runtime
+- `Salesforce/moirai-1.0-R-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `stabilityai/stable-diffusion-3.5-medium` (text-to-image): text-to-image requires complex or non-standard runtime
+- `nvidia/bigvgan_v2_44khz_128band_512x` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `eugenesiow/edsr-base` (no pipeline): missing pipeline_name
+- `AutonLab/MOMENT-1-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `hamishivi/tess2-v0.1` (no pipeline): missing pipeline_name
+- `google/flan-t5-large` (no pipeline): missing pipeline_name
+- `NeoQuasar/Kronos-Tokenizer-2k` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `rhasspy/faster-whisper-small-int8` (no pipeline): missing pipeline_name
+- `Lightricks/LTX-Video` (image-to-video): image-to-video requires complex or non-standard runtime
+- `nvidia/speakerverification_en_titanet_large` (no pipeline): missing pipeline_name
+- `abhinand/MedEmbed-base-v0.1` (no pipeline): missing pipeline_name
+- `CompVis/stable-diffusion-v1-4` (text-to-image): text-to-image requires complex or non-standard runtime
+- `openbmb/MiniCPM-o-2_6` (any-to-any): any-to-any requires complex or non-standard runtime
+- `moka-ai/m3e-base` (no pipeline): missing pipeline_name
+- `lmsys/gpt-oss-20b-bf16` (no pipeline): missing pipeline_name
+- `SmilingWolf/wd-swinv2-tagger-v3` (no pipeline): missing pipeline_name
+- `fastino/gliner2-large-v1` (no pipeline): missing pipeline_name
+- `Synaptics/yolo` (no pipeline): missing pipeline_name
+- `yyfz233/Pi3` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `fastino/gliner2-base-v1` (no pipeline): missing pipeline_name
+- `autogluon/mitra-regressor` (tabular-regression): tabular-regression requires complex or non-standard runtime
+- `SG161222/Realistic_Vision_V5.1_noVAE` (text-to-image): text-to-image requires complex or non-standard runtime
+- `ibm-granite/granite-timeseries-ttm-r2` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `facebook/m2m100_418M` (no pipeline): missing pipeline_name
+- `DeepBeepMeep/Wan2.1` (no pipeline): missing pipeline_name
+- `boltzgen/boltzgen-1` (no pipeline): missing pipeline_name
+- `Salesforce/moirai-2.0-R-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `playgroundai/playground-v2.5-1024px-aesthetic` (text-to-image): text-to-image requires complex or non-standard runtime
+- `fishaudio/s2-pro` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `Comfy-Org/HunyuanVideo_1.5_repackaged` (no pipeline): missing pipeline_name
+- `fixie-ai/turntaking-pretraining-it-multilingual-3c` (no pipeline): missing pipeline_name
+- `1-800-BAD-CODE/xlm-roberta_punctuation_fullstop_truecase` (no pipeline): missing pipeline_name
+- `facebook/dpr-ctx_encoder-single-nq-base` (no pipeline): missing pipeline_name
+- `facebook/wav2vec2-xls-r-300m` (no pipeline): missing pipeline_name
+- `nvidia/personaplex-7b-v1` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-BlenderbotModel` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-bert` (no pipeline): missing pipeline_name
+- `openbmb/MiniCPM-o-4_5` (any-to-any): any-to-any requires complex or non-standard runtime
+- `TencentBAC/Conan-embedding-v1` (no pipeline): missing pipeline_name
+- `facebook/musicgen-small` (text-to-audio): text-to-audio requires complex or non-standard runtime
+- `prajjwal1/bert-medium` (no pipeline): missing pipeline_name
+- `lengyue233/content-vec-best` (no pipeline): missing pipeline_name
+- `answerdotai/answerai-colbert-small-v1` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-roberta` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-t5` (no pipeline): missing pipeline_name
+- `HadrianSecurity/subwiz` (no pipeline): missing pipeline_name
+- `ibm-granite/granite-timeseries-ttm-r1` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `sesame/csm-1b` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `lightx2v/Wan2.2-Distill-Loras` (image-to-video): image-to-video requires complex or non-standard runtime
+- `alsgyu/sentiment-analysis-fine-tuned-model` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.2-dev` (image-to-image): image-to-image requires complex or non-standard runtime
+- `vidore/colpali-v1.3-hf` (visual-document-retrieval): visual-document-retrieval requires complex or non-standard runtime
+- `madebyollin/sdxl-vae-fp16-fix` (no pipeline): missing pipeline_name
+- `google/mt5-small` (no pipeline): missing pipeline_name
+- `Comfy-Org/ace_step_1.5_ComfyUI_files` (no pipeline): missing pipeline_name
+- `kernels-community/flash-attn3` (no pipeline): missing pipeline_name
+- `EssentialAI/eai-distill-0.5b` (no pipeline): missing pipeline_name
+- `biu-nlp/f-coref` (no pipeline): missing pipeline_name
+- `Synthefy/Nori` (tabular-regression): tabular-regression requires complex or non-standard runtime
+- `facebook/wav2vec2-large-xlsr-53` (no pipeline): missing pipeline_name
+- `facebook/VGGT-1B` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `neuphonic/neucodec` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `facebook/vjepa2-vitg-fpc64-256` (video-classification): video-classification requires complex or non-standard runtime
+- `studio-ousia/luke-large-finetuned-tacred` (no pipeline): missing pipeline_name
+- `google/byt5-small` (no pipeline): missing pipeline_name
+- `stabilityai/sdxl-vae` (no pipeline): missing pipeline_name
+- `NetoAISolutions/T-VEC` (no pipeline): missing pipeline_name
+- `DeepBeepMeep/LTX-2` (no pipeline): missing pipeline_name
+- `google/bert_uncased_L-2_H-128_A-2` (no pipeline): missing pipeline_name
+- `patrickvonplaten/bert2bert-cnn_dailymail-fp16` (no pipeline): missing pipeline_name
+- `google/electra-small-discriminator` (no pipeline): missing pipeline_name
+- `cagliostrolab/animagine-xl-4.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `jinaai/jina-colbert-v1-en` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-stable-diffusion-torch` (text-to-image): text-to-image requires complex or non-standard runtime
+- `google/bigbird-roberta-base` (no pipeline): missing pipeline_name
+- `MCG-NJU/videomae-base` (video-classification): video-classification requires complex or non-standard runtime
+- `Comfy-Org/flux1-schnell` (no pipeline): missing pipeline_name
+- `facebook/mbart-large-50-one-to-many-mmt` (no pipeline): missing pipeline_name
+- `allenai/scibert_scivocab_uncased` (no pipeline): missing pipeline_name
+- `numz/SeedVR2_comfyUI` (video-to-video): video-to-video requires complex or non-standard runtime
+- `microsoft/VibeVoice-1.5B` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `iarfmoose/t5-base-question-generator` (no pipeline): missing pipeline_name
+- `Revai/pyannote-wespeaker-voxceleb-resnet34-LM` (no pipeline): missing pipeline_name
+- `ibm-granite/granite-timeseries-tspulse-r1` (no pipeline): missing pipeline_name
+- `biohub/ESMFold2` (no pipeline): missing pipeline_name
+- `ai4bharat/IndicBART` (no pipeline): missing pipeline_name
+- `microsoft/layoutlm-base-uncased` (no pipeline): missing pipeline_name
+- `stabilityai/stable-video-diffusion-img2vid-xt` (image-to-video): image-to-video requires complex or non-standard runtime
+- `segmind/small-sd` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-stable-diffusion-xl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `nvidia/audio-flamingo-3-hf` (audio-text-to-text): audio-text-to-text requires complex or non-standard runtime
+- `XiaomiMiMo/MiMo-V2.5` (no pipeline): missing pipeline_name
+- `minishlab/potion-base-4M` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.1-schnell` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Lykon/DreamShaper` (text-to-image): text-to-image requires complex or non-standard runtime
+- `zed-industries/zeta` (no pipeline): missing pipeline_name
+- `LyliaEngine/Pony_Diffusion_V6_XL` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Kwai-Keye/Keye-VL-8B-Preview` (video-text-to-text): video-text-to-text requires complex or non-standard runtime
+- `vikp/surya_order` (no pipeline): missing pipeline_name
+- `RunDiffusion/Juggernaut-XL-v9` (text-to-image): text-to-image requires complex or non-standard runtime
+- `aufklarer/PersonaPlex-7B-MLX-4bit` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `TenStrip/LTX2.3-10Eros` (image-to-video): image-to-video requires complex or non-standard runtime
+- `google/t5-v1_1-xxl` (no pipeline): missing pipeline_name
+- `stable-diffusion-v1-5/stable-diffusion-inpainting` (text-to-image): text-to-image requires complex or non-standard runtime
+- `black-forest-labs/FLUX.2-small-decoder` (image-to-image): image-to-image requires complex or non-standard runtime
+- `pysentimiento/robertuito-emotion-analysis` (no pipeline): missing pipeline_name
+- `Kwai-Keye/Keye-VL-1_5-8B` (video-text-to-text): video-text-to-text requires complex or non-standard runtime
+- `frankjoshua/novaAnimeXL_ilV140` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-CLIPModel` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-whisper` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-lfm2` (no pipeline): missing pipeline_name
+- `aufklarer/DeepFilterNet3-CoreML` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `ybelkada/tiny-random-T5ForConditionalGeneration-calibrated` (no pipeline): missing pipeline_name
+- `vidore/colpali-v1.2` (visual-document-retrieval): visual-document-retrieval requires complex or non-standard runtime
+- `bosonai/higgs-audio-v2-generation-3B-base` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `1-800-BAD-CODE/punct_cap_seg_47_language` (no pipeline): missing pipeline_name
+- `h94/IP-Adapter-FaceID` (text-to-image): text-to-image requires complex or non-standard runtime
+- `ByteDance/LatentSync-1.6` (no pipeline): missing pipeline_name
+- `NX-AI/TiRex` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `nvidia/music-flamingo-2601-hf` (audio-text-to-text): audio-text-to-text requires complex or non-standard runtime
+- `optimum-intel-internal-testing/stable-diffusion-3-tiny-random` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Jarbas/ovos-model2vec-intents-distiluse-base-multilingual-cased-v2` (no pipeline): missing pipeline_name
+- `stabilityai/TripoSR` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-albert` (no pipeline): missing pipeline_name
+- `huawei-noah/TinyBERT_General_4L_312D` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/sam-vit-tiny-random` (no pipeline): missing pipeline_name
+- `autogluon/chronos-t5-mini` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `stabilityai/stable-diffusion-xl-refiner-1.0` (image-to-image): image-to-image requires complex or non-standard runtime
+- `ibm-granite/granite-4.1-8b` (no pipeline): missing pipeline_name
+- `martineux/dvine82-xl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-flux` (text-to-image): text-to-image requires complex or non-standard runtime
+- `abhinand/MedEmbed-large-v0.1` (no pipeline): missing pipeline_name
+- `thuml/sundial-base-128m` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `OpenMOSS-Team/MOSS-TTS-v1.5` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `facebook/mms-tts-eng` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `neuphonic/neutts-nano` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-aya-base` (no pipeline): missing pipeline_name
+- `llava-hf/LLaVA-NeXT-Video-7B-hf` (video-text-to-text): video-text-to-text requires complex or non-standard runtime
+- `Wan-AI/Wan2.1-T2V-1.3B-Diffusers` (text-to-video): text-to-video requires complex or non-standard runtime
+- `cagliostrolab/animagine-xl-3.1` (text-to-image): text-to-image requires complex or non-standard runtime
+- `John6666/one-obsession-17-red-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Anzhc/Anzhcs-VAEs` (no pipeline): missing pipeline_name
+- `Alibaba-NLP/WebSailor-32B` (no pipeline): missing pipeline_name
+- `UmeAiRT/ComfyUI-Auto-Installer-Assets` (no pipeline): missing pipeline_name
+- `nphSi/Z-Image-Lora` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-lfm2-moe` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-llava-next` (no pipeline): missing pipeline_name
+- `Salesforce/moirai-1.0-R-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-latent-consistency` (text-to-image): text-to-image requires complex or non-standard runtime
+- `biohub/ESMFold2-Experimental-Fast` (no pipeline): missing pipeline_name
+- `Comfy-Org/HiDream-I1_ComfyUI` (no pipeline): missing pipeline_name
+- `facebook/vjepa2-vith-fpc64-256` (video-classification): video-classification requires complex or non-standard runtime
+- `InstantX/FLUX.1-dev-Controlnet-Union` (no pipeline): missing pipeline_name
+- `microsoft/wavlm-base-plus-sv` (no pipeline): missing pipeline_name
+- `patrickvonplaten/t5-tiny-random` (no pipeline): missing pipeline_name
+- `Salesforce/moirai-moe-1.0-R-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `JusperLee/TIGER-DnR` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `black-forest-labs/FLUX.2-klein-9B` (image-to-image): image-to-image requires complex or non-standard runtime
+- `nvidia/Cosmos3-Nano` (no pipeline): missing pipeline_name
+- `SimianLuo/LCM_Dreamshaper_v7` (text-to-image): text-to-image requires complex or non-standard runtime
+- `biohub/ESMFold2-Experimental-Fast-Cutoff2025` (no pipeline): missing pipeline_name
+- `hiaoxui/sembscore` (no pipeline): missing pipeline_name
+- `pnnbao-ump/VieNeu-TTS-v2` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `ai9stars/Cheers` (no pipeline): missing pipeline_name
+- `Synaptics/MobileNetV2` (no pipeline): missing pipeline_name
+- `Comfy-Org/z_image` (no pipeline): missing pipeline_name
+- `pysentimiento/robertuito-hate-speech` (no pipeline): missing pipeline_name
+- `lrzjason/Anything2Real` (image-to-image): image-to-image requires complex or non-standard runtime
+- `zhihan1996/DNABERT-2-117M` (no pipeline): missing pipeline_name
+- `microsoft/prophetnet-large-uncased` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-hunyuan-v1-dense` (no pipeline): missing pipeline_name
+- `ivrit-ai/pyannote-segmentation-3.0` (no pipeline): missing pipeline_name
+- `kyutai/moshiko-pytorch-bf16` (no pipeline): missing pipeline_name
+- `DeepChem/ChemBERTa-77M-MTR` (no pipeline): missing pipeline_name
+- `uclanlp/plbart-base` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/wav2vec2-random-tiny-classifier` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-mamba` (no pipeline): missing pipeline_name
+- `google/flan-t5-xl` (no pipeline): missing pipeline_name
+- `biohub/ESMFold2-Fast` (no pipeline): missing pipeline_name
+- `facebook/blenderbot_small-90M` (no pipeline): missing pipeline_name
+- `google/bert_for_seq_generation_L-24_bbc_encoder` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.2-klein-base-4B` (image-to-image): image-to-image requires complex or non-standard runtime
+- `facebook/hf-seamless-m4t-medium` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `stas/tiny-wmt19-en-de` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.1-Kontext-dev` (image-to-image): image-to-image requires complex or non-standard runtime
+- `Comfy-Org/PixelDiT` (no pipeline): missing pipeline_name
+- `stabilityai/sd-x2-latent-upscaler` (no pipeline): missing pipeline_name
+- `google/rembert` (no pipeline): missing pipeline_name
+- `myshell-ai/MeloTTS-English` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `facebook/blenderbot-3B` (no pipeline): missing pipeline_name
+- `AntonV/Dia-1.6B` (no pipeline): missing pipeline_name
+- `SG161222/RealVisXL_V5.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `westlake-repl/Evolla-10B-hf` (no pipeline): missing pipeline_name
+- `google/mt5-large` (no pipeline): missing pipeline_name
+- `tohoku-nlp/bert-base-japanese-char-v3` (no pipeline): missing pipeline_name
+- `Comfy-Org/Lumina_Image_2.0_Repackaged` (no pipeline): missing pipeline_name
+- `Maple728/TimeMoE-200M` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `OpenMOSS-Team/MOSS-TTS-Nano-100M` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `jinaai/jina-colbert-v2` (no pipeline): missing pipeline_name
+- `xinsir/controlnet-union-sdxl-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `minishlab/potion-retrieval-32M` (no pipeline): missing pipeline_name
+- `LTP/small` (no pipeline): missing pipeline_name
+- `johahi/flashzoi-replicate-0` (no pipeline): missing pipeline_name
+- `John6666/nova-furry-xl-il-v120-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Kijai/MelBandRoFormer_comfy` (no pipeline): missing pipeline_name
+- `google/umt5-xxl` (no pipeline): missing pipeline_name
+- `vennify/t5-base-grammar-correction` (no pipeline): missing pipeline_name
+- `Salesforce/moirai-1.1-R-large` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Wan-AI/Wan2.2-I2V-A14B-Diffusers` (image-to-video): image-to-video requires complex or non-standard runtime
+- `facebook/vjepa2-vitl-fpc64-256` (video-classification): video-classification requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-SpeechT5ForTextToSpeech` (no pipeline): missing pipeline_name
+- `mispeech/midashenglm-7b-0804-fp32` (audio-text-to-text): audio-text-to-text requires complex or non-standard runtime
+- `Comfy-Org/HiDream-O1-Image` (no pipeline): missing pipeline_name
+- `microsoft/layoutxlm-base` (no pipeline): missing pipeline_name
+- `John6666/amanatsu-illustrious-v11-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `google/timesfm-2.5-200m-transformers` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `google/mt5-base` (no pipeline): missing pipeline_name
+- `John6666/diving-illustrious-real-asian-v50-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `AleksanderObuchowski/whisper-large-v3-turbo-med-pl-lora-r64-enc-dec-lr2e-04-ep5-whisper_bigos10k_fair-filtered` (no pipeline): missing pipeline_name
+- `SWivid/E2-TTS` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `prajjwal1/bert-mini` (no pipeline): missing pipeline_name
+- `Wan-AI/Wan2.2-TI2V-5B-Diffusers` (text-to-video): text-to-video requires complex or non-standard runtime
+- `programasweights/paw-programs` (no pipeline): missing pipeline_name
+- `ali-vilab/text-to-video-ms-1.7b` (text-to-video): text-to-video requires complex or non-standard runtime
+- `diarizers-community/speaker-segmentation-fine-tuned-callhome-jpn` (no pipeline): missing pipeline_name
+- `facebook/mgenre-wiki` (no pipeline): missing pipeline_name
+- `scerz/VibeVoice-ASR-4bit` (no pipeline): missing pipeline_name
+- `Wan-AI/Wan2.2-T2V-A14B-Diffusers` (text-to-video): text-to-video requires complex or non-standard runtime
+- `ibm-research/ttm-r3` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `myshell-ai/MeloTTS-Korean` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `Haon-Chen/e5-omni-7B` (visual-document-retrieval): visual-document-retrieval requires complex or non-standard runtime
+- `wan-world/Wan2.1-2.2` (no pipeline): missing pipeline_name
+- `stabilityai/sd-vae-ft-mse` (no pipeline): missing pipeline_name
+- `immich-app/ViT-B-32__openai` (no pipeline): missing pipeline_name
+- `facebook/mms-tts-hat` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `usyd-community/vitpose-base-simple` (keypoint-detection): keypoint-detection requires complex or non-standard runtime
+- `Alissonerdx/BFS-Best-Face-Swap` (image-to-image): image-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-granitemoehybrid` (no pipeline): missing pipeline_name
+- `diff-interpretation-tuning/loras` (no pipeline): missing pipeline_name
+- `Comfy-Org/sigclip_vision_384` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.1-Fill-dev` (no pipeline): missing pipeline_name
+- `Comfy-Org/flux1-kontext-dev_ComfyUI` (no pipeline): missing pipeline_name
+- `google/metricx-24-hybrid-xl-v2p6` (no pipeline): missing pipeline_name
+- `amazon/chronos-bolt-mini` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Wan-AI/Wan2.1-T2V-14B` (text-to-video): text-to-video requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-mbart` (no pipeline): missing pipeline_name
+- `Comfy-Org/stable-diffusion-3.5-fp8` (no pipeline): missing pipeline_name
+- `Kijai/flux-fp8` (no pipeline): missing pipeline_name
+- `eugenesiow/a2n` (no pipeline): missing pipeline_name
+- `madebyollin/taesd` (no pipeline): missing pipeline_name
+- `wikeeyang/Flux2-Klein-9B-True-V2` (text-to-image): text-to-image requires complex or non-standard runtime
+- `OpenMOSS-Team/MOVA-360p` (image-to-video): image-to-video requires complex or non-standard runtime
+- `fabiochiu/t5-base-tag-generation` (no pipeline): missing pipeline_name
+- `stablediffusionapi/juggernaut-reborn` (text-to-image): text-to-image requires complex or non-standard runtime
+- `microsoft/speecht5_tts` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-glm-edge` (no pipeline): missing pipeline_name
+- `alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.1` (no pipeline): missing pipeline_name
+- `minishlab/potion-multilingual-128M` (no pipeline): missing pipeline_name
+- `PickyBinders/tea` (no pipeline): missing pipeline_name
+- `canopylabs/3b-de-ft-research_release` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `BridgeTower/bridgetower-large-itm-mlm-itc` (no pipeline): missing pipeline_name
+- `PKOBP/polish-roberta-8k` (no pipeline): missing pipeline_name
+- `circulus/koelectra-act-v1` (no pipeline): missing pipeline_name
+- `circulus/koelectra-emotion-v1` (no pipeline): missing pipeline_name
+- `circulus/koelectra-dialect-v1` (no pipeline): missing pipeline_name
+- `circulus/koelectra-ethics-v1` (no pipeline): missing pipeline_name
+- `Rostlab/prot_t5_xl_uniref50` (no pipeline): missing pipeline_name
+- `minishlab/potion-base-32M` (no pipeline): missing pipeline_name
+- `autogluon/chronos-2-synth` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `digit82/kobart-summarization` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-sana` (text-to-image): text-to-image requires complex or non-standard runtime
+- `laion/CLIP-ViT-B-32-xlm-roberta-base-laion5B-s13B-b90k` (no pipeline): missing pipeline_name
+- `SG161222/RealVisXL_V4.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `microsoft/markuplm-base` (no pipeline): missing pipeline_name
+- `amazon/chronos-t5-large` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-maira2` (no pipeline): missing pipeline_name
+- `bosonai/higgs-audio-v3-tts-4b` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `ibm-research/biomed.omics.bl.sm.ma-ted-458m.dti_bindingdb_pkd` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-granite` (no pipeline): missing pipeline_name
+- `ElnaggarLab/ankh-base` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-ltx-video` (no pipeline): missing pipeline_name
+- `tencent/Hunyuan3D-2` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `myshell-ai/MeloTTS-Spanish` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `tencent/Hy-MT2-30B-A3B-FP8` (no pipeline): missing pipeline_name
+- `lmstudio-community/Hermes-4-70B-MLX-4bit` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-olmo-hf` (no pipeline): missing pipeline_name
+- `zai-org/glm-4v-9b` (no pipeline): missing pipeline_name
+- `Comfy-Org/HunyuanVideo_repackaged` (no pipeline): missing pipeline_name
+- `vikp/surya_det3` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-granite-moe` (no pipeline): missing pipeline_name
+- `allenai/OLMo-2-1124-7B` (no pipeline): missing pipeline_name
+- `nvidia/difix` (no pipeline): missing pipeline_name
+- `paust/pko-t5-base` (no pipeline): missing pipeline_name
+- `amsterdamNLP/Wav2Vec2-NL` (no pipeline): missing pipeline_name
+- `Runware/BFL-FLUX.2-klein-4B` (text-to-image): text-to-image requires complex or non-standard runtime
+- `deepset/sentence_bert` (no pipeline): missing pipeline_name
+- `nvidia/Cosmos-Predict2.5-2B` (no pipeline): missing pipeline_name
+- `NN-Dataset/tflite` (no pipeline): missing pipeline_name
+- `microsoft/xclip-base-patch32` (video-classification): video-classification requires complex or non-standard runtime
+- `nvidia/nemotron-colembed-vl-4b-v2` (visual-document-retrieval): visual-document-retrieval requires complex or non-standard runtime
+- `facebook/tribev2` (no pipeline): missing pipeline_name
+- `M-CLIP/XLM-Roberta-Large-Vit-B-16Plus` (no pipeline): missing pipeline_name
+- `microsoft/wavlm-base-sv` (no pipeline): missing pipeline_name
+- `sshleifer/bart-tiny-random` (no pipeline): missing pipeline_name
+- `Salesforce/moirai-1.1-R-small` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `lightseekorg/kimi-k2.5-eagle3` (no pipeline): missing pipeline_name
+- `John6666/obsession-illustriousxl-v10-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `OnomaAIResearch/Illustrious-xl-early-release-v0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `nvidia/Cosmos3-Super` (no pipeline): missing pipeline_name
+- `xinsir/controlnet-openpose-sdxl-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `lmstudio-community/Hermes-4-70B-MLX-8bit` (no pipeline): missing pipeline_name
+- `vikp/surya_rec2` (no pipeline): missing pipeline_name
+- `nvidia/prompt-task-and-complexity-classifier` (no pipeline): missing pipeline_name
+- `HumanCompatibleAI/ppo-seals-CartPole-v0` (reinforcement-learning): reinforcement-learning requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-GPTBigCodeModel` (no pipeline): missing pipeline_name
+- `lmstudio-community/Hermes-4-70B-MLX-6bit` (no pipeline): missing pipeline_name
+- `lmstudio-community/Hermes-4-70B-MLX-5bit` (no pipeline): missing pipeline_name
+- `neuphonic/distill-neucodec` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `Team-ACE/ToolACE-8B` (no pipeline): missing pipeline_name
+- `tohoku-nlp/bert-base-japanese-v3` (no pipeline): missing pipeline_name
+- `RunDiffusion/Juggernaut-XI-v11` (text-to-image): text-to-image requires complex or non-standard runtime
+- `trl-internal-testing/tiny-T5ForConditionalGeneration` (no pipeline): missing pipeline_name
+- `pnnbao-ump/VieNeu-TTS-v3-Turbo` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `Isi99999/Wan2.2BasedModels` (no pipeline): missing pipeline_name
+- `bibabobbb/kronons-token-eth-recent-new-long-lbk` (no pipeline): missing pipeline_name
+- `bibabobbb/kronons-eth-recent-new-long-lbk` (no pipeline): missing pipeline_name
+- `xychen123/LamPO` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.2-klein-4b-fp8` (image-to-image): image-to-image requires complex or non-standard runtime
+- `ostris/zimage_turbo_training_adapter` (text-to-image): text-to-image requires complex or non-standard runtime
+- `kenpath/svara-tts-v1` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `ByteDance-Seed/SeedVR2-3B` (video-to-video): video-to-video requires complex or non-standard runtime
+- `nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8` (any-to-any): any-to-any requires complex or non-standard runtime
+- `Babelscape/rebel-large` (no pipeline): missing pipeline_name
+- `diffusers/stable-diffusion-xl-1.0-inpainting-0.1` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-glm4` (no pipeline): missing pipeline_name
+- `TheReprinter/WAI-NSFW-illustrious-SDXL` (no pipeline): missing pipeline_name
+- `T5B/Z-Image-Turbo-FP8` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-xlm-roberta` (no pipeline): missing pipeline_name
+- `Wan-AI/Wan2.1-I2V-14B-480P` (image-to-video): image-to-video requires complex or non-standard runtime
+- `SpanBERT/spanbert-large-cased` (no pipeline): missing pipeline_name
+- `JacobLinCool/MP-SENet-DNS` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-BloomModel` (no pipeline): missing pipeline_name
+- `cagliostrolab/animagine-xl-3.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `tohoku-nlp/bert-large-japanese-v2` (no pipeline): missing pipeline_name
+- `microsoft/BiomedParse` (no pipeline): missing pipeline_name
+- `docling-project/CodeFormulaV2` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-GPTJModel` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-ConvBertForSequenceClassification` (no pipeline): missing pipeline_name
+- `weecology/deepforest-tree` (no pipeline): missing pipeline_name
+- `John6666/janku-v5-nsfw-trained-noobai-rou-wei-illustrious-xl-v50-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Salesforce/blip-itm-base-coco` (no pipeline): missing pipeline_name
+- `lllyasviel/FramePackI2V_HY` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.2-klein-9b-kv-fp8` (image-to-image): image-to-image requires complex or non-standard runtime
+- `nari-labs/Dia2-2B` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `software-mansion/react-native-executorch-all-MiniLM-L6-v2` (no pipeline): missing pipeline_name
+- `fastino/gliner2-multi-v1` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-electra` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-ibert` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-flux-fill` (no pipeline): missing pipeline_name
+- `qylu4156/strongreject-15k-v1` (no pipeline): missing pipeline_name
+- `Lykon/dreamshaper-8` (text-to-image): text-to-image requires complex or non-standard runtime
+- `lightx2v/Wan2.2-Distill-Models` (no pipeline): missing pipeline_name
+- `Zyphra/ZAYA1-8B` (no pipeline): missing pipeline_name
+- `sbintuitions/sarashina2.2-tts` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `EleutherAI/enformer-official-rough` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-roformer` (no pipeline): missing pipeline_name
+- `myshell-ai/MeloTTS-Chinese` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `Misha24-10/F5-TTS_RUSSIAN` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `microsoft/wavlm-base-plus-sd` (no pipeline): missing pipeline_name
+- `stabilityai/stable-audio-3-medium` (text-to-audio): text-to-audio requires complex or non-standard runtime
+- `black-forest-labs/FLUX.2-klein-base-9B` (image-to-image): image-to-image requires complex or non-standard runtime
+- `kyutai/tts-1.6b-en_fr` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `google/bert_uncased_L-4_H-512_A-8` (no pipeline): missing pipeline_name
+- `facebook/EUPE-ViT-B` (no pipeline): missing pipeline_name
+- `kernels-community/cv-utils` (no pipeline): missing pipeline_name
+- `microsoft/layoutlmv3-large` (no pipeline): missing pipeline_name
+- `dbmdz/bert-base-turkish-cased` (no pipeline): missing pipeline_name
+- `alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union` (no pipeline): missing pipeline_name
+- `microsoft/speecht5_hifigan` (no pipeline): missing pipeline_name
+- `autogluon/mitra-classifier` (tabular-classification): tabular-classification requires complex or non-standard runtime
+- `gxcsoccer/kronos-mlx-tokenizer-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `ibm-esa-geospatial/TerraMind-1.0-base` (no pipeline): missing pipeline_name
+- `Wan-AI/Wan2.1-I2V-14B-720P-Diffusers` (image-to-video): image-to-video requires complex or non-standard runtime
+- `kernels-community/relu` (no pipeline): missing pipeline_name
+- `Comfy-Org/Lens` (no pipeline): missing pipeline_name
+- `MCG-NJU/videomae-base-finetuned-kinetics` (video-classification): video-classification requires complex or non-standard runtime
+- `ByteDance/Hyper-SD` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Salesforce/codet5p-110m-embedding` (no pipeline): missing pipeline_name
+- `Comfy-Org/hunyuan3D_2.1_repackaged` (no pipeline): missing pipeline_name
+- `alibaba-pai/Wan2.2-Fun-Reward-LoRAs` (text-to-video): text-to-video requires complex or non-standard runtime
+- `Wan-AI/Wan2.1-VACE-14B-diffusers` (image-to-video): image-to-video requires complex or non-standard runtime
+- `Wan-AI/Wan2.1-I2V-14B-480P-Diffusers` (image-to-video): image-to-video requires complex or non-standard runtime
+- `InstantX/InstantID` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Tencent-Hunyuan/HunyuanDiT-v1.1-Diffusers-Distilled` (text-to-image): text-to-image requires complex or non-standard runtime
+- `flyingfishinwater/good_and_small_models` (no pipeline): missing pipeline_name
+- `John6666/prefect-illustrious-xl-v3-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Laxhar/noobai-XL-1.1` (text-to-image): text-to-image requires complex or non-standard runtime
+- `nvidia/Cosmos3-Super-Text2Image` (text-to-image): text-to-image requires complex or non-standard runtime
+- `black-forest-labs/FLUX.2-klein-base-4b-fp8` (image-to-image): image-to-image requires complex or non-standard runtime
+- `hasnain43/bert-stock-sentiment-v1` (no pipeline): missing pipeline_name
+- `KotaroKinoshita/yomitoku-text-recognizer-parseq-open-beta` (no pipeline): missing pipeline_name
+- `tattabio/flashppi` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-olmo2` (no pipeline): missing pipeline_name
+- `Wan-AI/Wan2.1-T2V-14B-Diffusers` (text-to-video): text-to-video requires complex or non-standard runtime
+- `HiDream-ai/HiDream-I1-Fast` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Nikeytas/videomae-crime-detector-maxdata-v1` (video-classification): video-classification requires complex or non-standard runtime
+- `thibaud/controlnet-openpose-sdxl-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-OPTModel` (no pipeline): missing pipeline_name
+- `gxcsoccer/kronos-mlx-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `biohub/ESMFold2-Experimental` (no pipeline): missing pipeline_name
+- `biohub/ESMFold2-Experimental-Cutoff2025` (no pipeline): missing pipeline_name
+- `omni-research/Tarsier2-Recap-7b` (no pipeline): missing pipeline_name
+- `cyberdelia/CyberRealistic` (text-to-image): text-to-image requires complex or non-standard runtime
+- `pysentimiento/bertweet-pt-sentiment` (no pipeline): missing pipeline_name
+- `FastVideo/FastWan2.2-TI2V-5B-FullAttn-Diffusers` (text-to-video): text-to-video requires complex or non-standard runtime
+- `DeepBeepMeep/Wan2.2` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-WavlmModel` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-UnispeechSatModel` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-Data2VecAudioModel` (no pipeline): missing pipeline_name
+- `lightseekorg/kimi-k2.6-eagle3.1-mla` (no pipeline): missing pipeline_name
+- `myshell-ai/MeloTTS-Japanese` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `Supertone/supertonic-3` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `SmilingWolf/wd-vit-tagger-v3` (no pipeline): missing pipeline_name
+- `usyd-community/vitpose-plus-huge` (keypoint-detection): keypoint-detection requires complex or non-standard runtime
+- `depth-anything/DA3-BASE` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `Wan-AI/Wan2.1-T2V-1.3B` (text-to-video): text-to-video requires complex or non-standard runtime
+- `allenai/OLMo-2-1124-13B` (no pipeline): missing pipeline_name
+- `ByteDance/SDXL-Lightning` (text-to-image): text-to-image requires complex or non-standard runtime
+- `pramodlohra/Qween3_4B_thinking_finetune` (no pipeline): missing pipeline_name
+- `lodestones/Chroma1-HD` (text-to-image): text-to-image requires complex or non-standard runtime
+- `John6666/hassaku-xl-illustrious-v31-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `kernels-community/activation` (no pipeline): missing pipeline_name
+- `latent-consistency/lcm-lora-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `AutonLab/MOMENT-1-large` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-pegasus` (no pipeline): missing pipeline_name
+- `myshell-ai/MeloTTS-French` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `latent-consistency/lcm-lora-sdv1-5` (text-to-image): text-to-image requires complex or non-standard runtime
+- `eracle/campaign-kit` (no pipeline): missing pipeline_name
+- `kuprel/min-dalle` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-wav2vec2-conformer` (no pipeline): missing pipeline_name
+- `peft-internal-testing/tiny-random-BartForConditionalGeneration` (no pipeline): missing pipeline_name
+- `Danswer/intent-model` (no pipeline): missing pipeline_name
+- `csebuetnlp/banglabert` (no pipeline): missing pipeline_name
+- `relik-ie/relik-relation-extraction-small` (no pipeline): missing pipeline_name
+- `lerobot/smolvla_base` (robotics): robotics requires complex or non-standard runtime
+- `nvidia/GR00T-N1.7-3B` (robotics): robotics requires complex or non-standard runtime
+- `magespace/Wan2.2-I2V-A14B-Lightning-Diffusers` (text-to-video): text-to-video requires complex or non-standard runtime
+- `paris-noah/Mantis-8M` (no pipeline): missing pipeline_name
+- `google/t5_11b_trueteacher_and_anli` (no pipeline): missing pipeline_name
+- `google/vivit-b-16x2-kinetics400` (video-classification): video-classification requires complex or non-standard runtime
+- `Wan-AI/Wan2.1-I2V-14B-720P` (image-to-video): image-to-video requires complex or non-standard runtime
+- `onnx-community/Kokoro-82M-ONNX` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `zai-org/GLM-Image` (text-to-image): text-to-image requires complex or non-standard runtime
+- `prithivida/grammar_error_correcter_v1` (no pipeline): missing pipeline_name
+- `Scriptix/whisper-large-v3-turbo` (no pipeline): missing pipeline_name
+- `multimodalart/higgs-audio-v3-tts-4b-transformers` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `xai-org/grok-2` (no pipeline): missing pipeline_name
+- `ACE-Step/Ace-Step1.5` (text-to-audio): text-to-audio requires complex or non-standard runtime
+- `Comfy-Org/Real-ESRGAN_repackaged` (no pipeline): missing pipeline_name
+- `lodestones/Chroma1-Flash` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-GPTNeoModel` (no pipeline): missing pipeline_name
+- `baidu/ERNIE-Image` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Comfy-Org/NewBie-image-Exp0.1_repackaged` (no pipeline): missing pipeline_name
+- `ggml-org/test-model-stories260K` (no pipeline): missing pipeline_name
+- `stabilityai/stable-diffusion-3.5-large-controlnet-depth` (text-to-image): text-to-image requires complex or non-standard runtime
+- `KittenML/kitten-tts-mini-0.8` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-trinity` (no pipeline): missing pipeline_name
+- `jukofyork/creative-writing-control-vectors-v3.0` (no pipeline): missing pipeline_name
+- `amd/Kimi-K2.5-MXFP4` (no pipeline): missing pipeline_name
+- `google/long-t5-tglobal-base` (no pipeline): missing pipeline_name
+- `ggml-org/test-model-stories260K-infill` (no pipeline): missing pipeline_name
+- `stabilityai/stable-audio-open-1.0` (text-to-audio): text-to-audio requires complex or non-standard runtime
+- `notmax123/Zonos-Hebrew` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `black-forest-labs/FLUX.2-klein-9b-fp8` (image-to-image): image-to-image requires complex or non-standard runtime
+- `xinsir/controlnet-scribble-sdxl-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Laxhar/noobai-XL-Vpred-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-minicpmv-2_6` (no pipeline): missing pipeline_name
+- `Salesforce/moirai-1.0-R-large` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-llava-next-video` (no pipeline): missing pipeline_name
+- `stepfun-ai/Step-Audio-EditX` (no pipeline): missing pipeline_name
+- `dmis-lab/biobert-base-cased-v1.1` (no pipeline): missing pipeline_name
+- `wan-world/Wan2.2` (no pipeline): missing pipeline_name
+- `OliBomby/Mapperatorinator-v32` (no pipeline): missing pipeline_name
+- `naver/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `peft-internal-testing/tiny-random-T5ForConditionalGeneration-calibrated` (no pipeline): missing pipeline_name
+- `cuhkaih/rhofold` (no pipeline): missing pipeline_name
+- `facebook/sam-audio-judge` (no pipeline): missing pipeline_name
+- `jdopensource/JoyAI-Image-Edit-Diffusers` (image-to-image): image-to-image requires complex or non-standard runtime
+- `caidas/swin2SR-classical-sr-x2-64` (image-to-image): image-to-image requires complex or non-standard runtime
+- `amazon/chronos-t5-mini` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `vikp/surya_tablerec` (no pipeline): missing pipeline_name
+- `SG161222/Realistic_Vision_V6.0_B1_noVAE` (text-to-image): text-to-image requires complex or non-standard runtime
+- `FastVideo/FastHunyuan-diffusers` (no pipeline): missing pipeline_name
+- `vikp/surya_layout3` (no pipeline): missing pipeline_name
+- `ibm-granite/granite-timeseries-flowstate-r1` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Manojb/stable-diffusion-2-1-base` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Datadog/Toto-Open-Base-1.0` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `google/byt5-large` (no pipeline): missing pipeline_name
+- `persiannlp/mt5-small-parsinlu-opus-translation_fa_en` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-language_perceiver` (no pipeline): missing pipeline_name
+- `johahi/borzoi-replicate-0` (no pipeline): missing pipeline_name
+- `stabilityai/stable-diffusion-3.5-large-controlnet-canny` (text-to-image): text-to-image requires complex or non-standard runtime
+- `ETH-CVG/lightglue_superpoint` (keypoint-detection): keypoint-detection requires complex or non-standard runtime
+- `software-mansion/react-native-executorch-kokoro` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `autogluon/chronos-t5-tiny` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `sensenova/SenseNova-U1-8B-MoT` (any-to-any): any-to-any requires complex or non-standard runtime
+- `protonx-models/protonx-legal-tc` (no pipeline): missing pipeline_name
+- `AInVFX/SeedVR2_comfyUI` (video-to-video): video-to-video requires complex or non-standard runtime
+- `DeepBeepMeep/Flux2` (no pipeline): missing pipeline_name
+- `google/byt5-base` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.1-Depth-dev-lora` (no pipeline): missing pipeline_name
+- `zai-org/glm-4-voice-tokenizer` (no pipeline): missing pipeline_name
+- `biu-nlp/lingmess-coref` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-VisionEncoderDecoderModel-vit-gpt2` (no pipeline): missing pipeline_name
+- `nvidia/Cosmos3-Super-Image2Video` (image-to-video): image-to-video requires complex or non-standard runtime
+- `fxmarty/speecht5-hifigan-tiny` (no pipeline): missing pipeline_name
+- `unsloth/orpheus-3b-0.1-ft` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `lodestones/Chroma1-Base` (text-to-image): text-to-image requires complex or non-standard runtime
+- `software-mansion/react-native-executorch-fsmn-vad` (no pipeline): missing pipeline_name
+- `nvidia/Cosmos3-Nano-Policy-DROID` (no pipeline): missing pipeline_name
+- `rhasspy/faster-whisper-medium-int8` (no pipeline): missing pipeline_name
+- `vikp/surya_det2` (no pipeline): missing pipeline_name
+- `apple/DFN5B-CLIP-ViT-H-14` (no pipeline): missing pipeline_name
+- `Nextcloud-AI/sdxl-turbo` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-longt5` (no pipeline): missing pipeline_name
+- `vikp/surya_rec` (no pipeline): missing pipeline_name
+- `ARL3K1N/Flux-Uncensored-V2` (image-to-image): image-to-image requires complex or non-standard runtime
+- `joyfox/LTX-2.3-Transition-LORA` (image-to-video): image-to-video requires complex or non-standard runtime
+- `OpenMOSS-Team/MOSS-TTS-Realtime` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `nvidia/Alpamayo-1.5-10B` (robotics): robotics requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-m2m_100` (no pipeline): missing pipeline_name
+- `google/mt5-xl` (no pipeline): missing pipeline_name
+- `ai-forever/ruElectra-small` (no pipeline): missing pipeline_name
+- `lerobot/pi0fast-libero` (no pipeline): missing pipeline_name
+- `ibm-research/flowstate` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Comfy-Org/USO_1.0_Repackaged` (no pipeline): missing pipeline_name
+- `marcmendez-aily/BertMeshTerms` (no pipeline): missing pipeline_name
+- `John6666/prefect-pony-xl-v50-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-sana-sprint` (no pipeline): missing pipeline_name
+- `purplesmartai/pony-v7-base` (text-to-image): text-to-image requires complex or non-standard runtime
+- `alexrzem/flux-loras` (no pipeline): missing pipeline_name
+- `dx8152/Flux2-Klein-9B-Consistency` (image-to-image): image-to-image requires complex or non-standard runtime
+- `syssec-utd/py311-pylingual-v1-statement` (no pipeline): missing pipeline_name
+- `johahi/flashzoi-replicate-1` (no pipeline): missing pipeline_name
+- `johahi/flashzoi-replicate-3` (no pipeline): missing pipeline_name
+- `Marqo/marqo-ecommerce-embeddings-L` (no pipeline): missing pipeline_name
+- `johahi/flashzoi-replicate-2` (no pipeline): missing pipeline_name
+- `caidas/swin2SR-realworld-sr-x4-64-bsrgan-psnr` (image-to-image): image-to-image requires complex or non-standard runtime
+- `fancyfeast/bigaspv2-5` (text-to-image): text-to-image requires complex or non-standard runtime
+- `dbmdz/bert-base-turkish-128k-uncased` (no pipeline): missing pipeline_name
+- `stabilityai/stable-diffusion-3-medium-diffusers` (text-to-image): text-to-image requires complex or non-standard runtime
+- `canopylabs/orpheus-3b-0.1-ft` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `Comfy-Org/hunyuan3D_2.0_repackaged` (no pipeline): missing pipeline_name
+- `HuggingFaceVLA/smolvla_libero` (robotics): robotics requires complex or non-standard runtime
+- `HumanCompatibleAI/ppo-Pendulum-v1` (reinforcement-learning): reinforcement-learning requires complex or non-standard runtime
+- `1-800-BAD-CODE/punctuation_fullstop_truecase_english` (no pipeline): missing pipeline_name
+- `usyd-community/vitpose-plus-small` (keypoint-detection): keypoint-detection requires complex or non-standard runtime
+- `google/t5-v1_1-small` (no pipeline): missing pipeline_name
+- `suno/bark-small` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `sd2-community/stable-diffusion-2-inpainting` (image-to-image): image-to-image requires complex or non-standard runtime
+- `zeahub/lpips` (no pipeline): missing pipeline_name
+- `google/magenta-realtime-2` (text-to-audio): text-to-audio requires complex or non-standard runtime
+- `JC1DA/Qwopus3.6-27B-v2-INT4-W4A16-Autoround` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-camembert` (no pipeline): missing pipeline_name
+- `Datadog/Toto-2.0-2.5B` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-DebertaV2Model` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-Wav2Vec2Model` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.2-klein-base-9b-fp8` (image-to-image): image-to-image requires complex or non-standard runtime
+- `starvector/starvector-8b-im2svg` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-rembert` (no pipeline): missing pipeline_name
+- `FreedomIntelligence/openPangu-Embedded-7B-V1.1` (no pipeline): missing pipeline_name
+- `stabilityai/stable-video-diffusion-img2vid` (image-to-video): image-to-video requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-EsmModel` (no pipeline): missing pipeline_name
+- `facebook/pe-av-base-16-frame` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-MPNetModel` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-MobileBertModel` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.1-Canny-dev-lora` (no pipeline): missing pipeline_name
+- `tencent/Hunyuan3D-2.1` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `TencentARC/InstantMesh` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `Saidakbar01/whisper-uz-finetuned` (no pipeline): missing pipeline_name
+- `nvidia/Cosmos-Predict2-2B-Video2World` (image-to-video): image-to-video requires complex or non-standard runtime
+- `AstraMindAI/xtts2-gpt` (no pipeline): missing pipeline_name
+- `vrgamedevgirl84/Wan14BT2VFusioniX` (text-to-video): text-to-video requires complex or non-standard runtime
+- `NeelNanda/SoLU_2L512W_C4_Code` (no pipeline): missing pipeline_name
+- `facebook/map-anything` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `ali-vilab/i2vgen-xl` (text-to-video): text-to-video requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-SEWModel` (no pipeline): missing pipeline_name
+- `rtila-corporation/rtila-assistant-lite-1.5` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-unispeech` (no pipeline): missing pipeline_name
+- `lmstudio-community/Olmo-3-32B-Think-MLX-4bit` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-HubertModel` (no pipeline): missing pipeline_name
+- `Prior-Labs/TabPFN-v2-clf` (tabular-classification): tabular-classification requires complex or non-standard runtime
+- `XLabs-AI/flux-ip-adapter` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Comfy-Org/lotus` (no pipeline): missing pipeline_name
+- `lerobot/pi05_base` (robotics): robotics requires complex or non-standard runtime
+- `opendatalab/MinerU-HTML-v1.1-hunyuan0.5B-compact` (no pipeline): missing pipeline_name
+- `lmstudio-community/Olmo-3-32B-Think-MLX-8bit` (no pipeline): missing pipeline_name
+- `lmstudio-community/Olmo-3-32B-Think-MLX-6bit` (no pipeline): missing pipeline_name
+- `johahi/borzoi-replicate-2` (no pipeline): missing pipeline_name
+- `google/t5-v1_1-base` (no pipeline): missing pipeline_name
+- `ideogram-ai/ideogram-4-fp8` (text-to-image): text-to-image requires complex or non-standard runtime
+- `valhalla/t5-base-qg-hl` (no pipeline): missing pipeline_name
+- `johahi/borzoi-replicate-1` (no pipeline): missing pipeline_name
+- `bigscience/T0pp` (no pipeline): missing pipeline_name
+- `dbmdz/bert-base-turkish-uncased` (no pipeline): missing pipeline_name
+- `johahi/borzoi-replicate-3` (no pipeline): missing pipeline_name
+- `laion/CLIP-ViT-g-14-laion2B-s12B-b42K` (no pipeline): missing pipeline_name
+- `koboldcpp/tts` (no pipeline): missing pipeline_name
+- `google/metricx-24-hybrid-large-v2p6` (no pipeline): missing pipeline_name
+- `tianweiy/DMD2` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Lightricks/LTX-Video-ICLoRA-detailer-13b-0.9.8` (text-to-video): text-to-video requires complex or non-standard runtime
+- `peft-internal-testing/tiny_OPTForQuestionAnswering-lora` (no pipeline): missing pipeline_name
+- `peft-internal-testing/tiny-T5ForConditionalGeneration` (no pipeline): missing pipeline_name
+- `Kijai/LTXV2_comfy` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-stable-diffusion-with-safety-checker` (text-to-image): text-to-image requires complex or non-standard runtime
+- `CohereLabs/Cohere-embed-multilingual-v3.0` (no pipeline): missing pipeline_name
+- `docling-project/docling-layout-old` (no pipeline): missing pipeline_name
+- `ZhenYe234/hubert_base_general_audio` (no pipeline): missing pipeline_name
+- `MingZhong/unieval-sum` (no pipeline): missing pipeline_name
+- `ogkalu/comic-text-and-bubble-detector` (no pipeline): missing pipeline_name
+- `IPostYellow/TurboWan2.1-T2V-1.3B-Diffusers` (text-to-video): text-to-video requires complex or non-standard runtime
+- `Maple728/TimeMoE-50M` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Seregil13th/Sulphur-2-base` (text-to-video): text-to-video requires complex or non-standard runtime
+- `ponpoke/flux2-klein-9b-uncensored-text-encoder` (text-to-image): text-to-image requires complex or non-standard runtime
+- `monadical-labs/minecraft-skin-generator-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `facebook/mbart-large-50` (no pipeline): missing pipeline_name
+- `ibm-research/patchtst-fm-r1` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `meituan-longcat/LongCat-Image-Edit` (image-to-image): image-to-image requires complex or non-standard runtime
+- `diffusers/controlnet-canny-sdxl-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `google/timesfm-2.0-500m-pytorch` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `Comfy-Org/Chroma1-HD_repackaged` (no pipeline): missing pipeline_name
+- `wiki-virus/hyperspectral-image-classification-using-modern-architectures-and-frameworks` (no pipeline): missing pipeline_name
+- `Comfy-Org/FLUX.1-Krea-dev_ComfyUI` (no pipeline): missing pipeline_name
+- `TencentGameMate/chinese-wav2vec2-large` (no pipeline): missing pipeline_name
+- `peft-internal-testing/tiny_GPT2ForTokenClassification-lora` (no pipeline): missing pipeline_name
+- `yyfz233/Pi3X` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `Comfy-Org/HunyuanImage_2.1_ComfyUI` (no pipeline): missing pipeline_name
+- `MingZhong/unieval-dialog` (no pipeline): missing pipeline_name
+- `dbmdz/bert-base-french-europeana-cased` (no pipeline): missing pipeline_name
+- `Koushim/yolov8-license-plate-detection` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-vision_perceiver_conv` (no pipeline): missing pipeline_name
+- `lpiccinelli/unik3d-vitl` (no pipeline): missing pipeline_name
+- `JorisCos/DCCRNet_Libri1Mix_enhsingle_16k` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `HauhauCS/GLM-4.7-Flash-Uncensored-HauhauCS-Balanced` (no pipeline): missing pipeline_name
+- `google/metricx-24-hybrid-xxl-v2p6-bfloat16` (no pipeline): missing pipeline_name
+- `lmstudio-community/Magistral-Small-2509-MLX-8bit` (no pipeline): missing pipeline_name
+- `google/bert_uncased_L-4_H-256_A-4` (no pipeline): missing pipeline_name
+- `microsoft/skala-1.0` (no pipeline): missing pipeline_name
+- `Mia-AiLab/Qwable-3.6-27b` (no pipeline): missing pipeline_name
+- `pmczip/Z-Image-Turbo_Models` (text-to-image): text-to-image requires complex or non-standard runtime
+- `onecat-ai/OneCAT-3B` (no pipeline): missing pipeline_name
+- `sshleifer/tiny-mbart` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-exaone4` (no pipeline): missing pipeline_name
+- `stabilityai/stable-diffusion-3.5-large` (text-to-image): text-to-image requires complex or non-standard runtime
+- `minishlab/potion-code-16M` (no pipeline): missing pipeline_name
+- `Comfy-Org/SDPose` (no pipeline): missing pipeline_name
+- `vikp/surya_det` (no pipeline): missing pipeline_name
+- `kyutai/tts-0.75b-en-public` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `allenai/led-base-16384` (no pipeline): missing pipeline_name
+- `misri/animaPencilXL_v500` (text-to-image): text-to-image requires complex or non-standard runtime
+- `syssec-utd/py312-pylingual-v1-statement` (no pipeline): missing pipeline_name
+- `kakao-enterprise/vits-ljs` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `cyberdelia/CyberRealisticPony` (text-to-image): text-to-image requires complex or non-standard runtime
+- `lmstudio-community/Magistral-Small-2509-MLX-4bit` (no pipeline): missing pipeline_name
+- `joyfox/LTX2.3-ICEdit-Insight` (video-to-video): video-to-video requires complex or non-standard runtime
+- `zai-org/glm-4-voice-9b` (no pipeline): missing pipeline_name
+- `John6666/nova-anime-xl-il-v80-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `peft-internal-testing/tiny_OPTForSequenceClassification-lora` (no pipeline): missing pipeline_name
+- `1038lab/BiRefNet` (no pipeline): missing pipeline_name
+- `ByteDance/LatentSync-1.5` (no pipeline): missing pipeline_name
+- `ai4bharat/IndicF5` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `lmstudio-community/Magistral-Small-2509-MLX-6bit` (no pipeline): missing pipeline_name
+- `huggingface/autoformer-tourism-monthly` (no pipeline): missing pipeline_name
+- `lmstudio-community/Magistral-Small-2509-MLX-5bit` (no pipeline): missing pipeline_name
+- `Prior-Labs/TabPFN-v2-reg` (tabular-regression): tabular-regression requires complex or non-standard runtime
+- `LuckyOda/comfyui-full-pack` (no pipeline): missing pipeline_name
+- `allenai/biomed_roberta_base` (no pipeline): missing pipeline_name
+- `John6666/true-pencil-xl-v100-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `vikp/surya_layout2` (no pipeline): missing pipeline_name
+- `ibm-research/moe-7b-1b-active-shared-experts` (no pipeline): missing pipeline_name
+- `DeverDever/index-cp0-v0` (no pipeline): missing pipeline_name
+- `Datadog/Toto-2.0-313m` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `duongve/NetaYume-Lumina-Image-2.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `lzyvegetable/FLUX.1-schnell` (text-to-image): text-to-image requires complex or non-standard runtime
+- `amd/Kimi-K2.6-MXFP4` (no pipeline): missing pipeline_name
+- `facebook/map-anything-apache` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `meituan-longcat/LongCat-Image-Edit-Turbo` (image-to-image): image-to-image requires complex or non-standard runtime
+- `arda-argmax/sortformer-finetuned` (no pipeline): missing pipeline_name
+- `YxZhang/evf-sam2-multitask` (no pipeline): missing pipeline_name
+- `cvssp/audioldm2` (no pipeline): missing pipeline_name
+- `amd/gpt-oss-120b-w-mxfp4-a-fp8` (no pipeline): missing pipeline_name
+- `katuni4ka/tiny-random-siglip` (no pipeline): missing pipeline_name
+- `facebook/cwm` (no pipeline): missing pipeline_name
+- `google/ddpm-cifar10-32` (unconditional-image-generation): unconditional-image-generation requires complex or non-standard runtime
+- `dataautogpt3/ProteusV0.3` (text-to-image): text-to-image requires complex or non-standard runtime
+- `nvidia/Cosmos-H-Surgical` (image-text-to-video): image-text-to-video requires complex or non-standard runtime
+- `paris-noah/MantisV2` (no pipeline): missing pipeline_name
+- `HPLT/hplt2c_nob_checkpoints` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-stable-diffusion-xl-refiner` (image-to-image): image-to-image requires complex or non-standard runtime
+- `MultiSynt/nemotron-cc-norwegian-tower9b` (no pipeline): missing pipeline_name
+- `silveroxides/FLUX.2-dev-fp8_scaled` (image-to-image): image-to-image requires complex or non-standard runtime
+- `neuphonic/neutts-air` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `castorini/monot5-base-msmarco` (no pipeline): missing pipeline_name
+- `nomic-ai/colnomic-embed-multimodal-7b` (visual-document-retrieval): visual-document-retrieval requires complex or non-standard runtime
+- `samsl/topsy_turvy_human_v1` (no pipeline): missing pipeline_name
+- `Wan-AI/Wan2.2-S2V-14B` (image-to-video): image-to-video requires complex or non-standard runtime
+- `google/electra-large-discriminator` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-BeitForImageClassification` (no pipeline): missing pipeline_name
+- `facebook/mms-1b` (no pipeline): missing pipeline_name
+- `kernels-community/flash-attn2` (no pipeline): missing pipeline_name
+- `John6666/hassaku-xl-illustrious-v21-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `peft-internal-testing/tiny_WhisperForConditionalGeneration-lora` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-Data2VecVisionModel` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-DeiTModel` (no pipeline): missing pipeline_name
+- `Forrest20231206/ernie-3.0-base-zh-cls` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-LevitModel` (no pipeline): missing pipeline_name
+- `tylermaister/SkyrimLikeVoices` (no pipeline): missing pipeline_name
+- `naver/DUSt3R_ViTLarge_BaseDecoder_512_dpt` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `Datadog/Toto-2.0-22m` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `DeepBeepMeep/Flux` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-MobileNetV2Model` (no pipeline): missing pipeline_name
+- `CrashOverrideX/Quillan-Ronin` (no pipeline): missing pipeline_name
+- `camenduru/AnimateDiff` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-PoolFormerModel` (no pipeline): missing pipeline_name
+- `xinsir/controlnet-canny-sdxl-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `google/t5-efficient-tiny` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-SegformerModel` (no pipeline): missing pipeline_name
+- `gotutiyan/gector-deberta-large-5k` (no pipeline): missing pipeline_name
+- `alana89/TabSTAR` (tabular-classification): tabular-classification requires complex or non-standard runtime
+- `AutonLab/MOMENT-1-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `mudler/vibevoice.cpp-models` (no pipeline): missing pipeline_name
+- `TencentGameMate/chinese-wav2vec2-base` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-SwinModel` (no pipeline): missing pipeline_name
+- `peft-internal-testing/tiny-random-t5` (no pipeline): missing pipeline_name
+- `diffusers/FLUX.2-dev-bnb-4bit` (image-to-image): image-to-image requires complex or non-standard runtime
+- `allenai/longformer-large-4096` (no pipeline): missing pipeline_name
+- `lllyasviel/sd-controlnet-canny` (image-to-image): image-to-image requires complex or non-standard runtime
+- `BabyLM-community/babylm-baseline-10m-gpt-bert-mixed` (no pipeline): missing pipeline_name
+- `zai-org/CogVideoX-2b` (text-to-video): text-to-video requires complex or non-standard runtime
+- `KittenML/kitten-tts-nano-0.1` (no pipeline): missing pipeline_name
+- `scoutminer/base1` (no pipeline): missing pipeline_name
+- `genai-archive/anything-v5` (text-to-image): text-to-image requires complex or non-standard runtime
+- `JusperLee/TIGER-speech` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `ai21labs/Jamba-tiny-reward-dev` (no pipeline): missing pipeline_name
+- `prajjwal1/bert-small` (no pipeline): missing pipeline_name
+- `diffusers/controlnet-depth-sdxl-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `siyan824/reloc3r-512` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `Marqo/marqo-ecommerce-embeddings-B` (no pipeline): missing pipeline_name
+- `lmarena-ai/p2l-0.5b-grk-01112025` (no pipeline): missing pipeline_name
+- `sudo-ai/zero123plus-v1.2` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-ast` (no pipeline): missing pipeline_name
+- `LiconStudio/LTX-2.3-Multiple-Subject-Reference` (no pipeline): missing pipeline_name
+- `meituan-longcat/LongCat-Image` (text-to-image): text-to-image requires complex or non-standard runtime
+- `optimum-intel-internal-testing/tiny-random-convnext` (no pipeline): missing pipeline_name
+- `BabyLM-community/babylm-baseline-10m-gpt-bert-causal-focus` (no pipeline): missing pipeline_name
+- `syssec-utd/py313-pylingual-v1.1-statement` (no pipeline): missing pipeline_name
+- `ScanMe/test-models` (no pipeline): missing pipeline_name
+- `John6666/autismmix-sdxl-autismmix-pony-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `BabyLM-community/babylm-baseline-100m-gpt-bert-causal-focus` (no pipeline): missing pipeline_name
+- `R0mAI/reliquary-sn-v23` (no pipeline): missing pipeline_name
+- `lopi999/Wan2.2-I2V_General-NSFW-LoRA` (text-to-image): text-to-image requires complex or non-standard runtime
+- `peft-internal-testing/tiny_T5ForSeq2SeqLM-lora` (no pipeline): missing pipeline_name
+- `infinity1096/UFM-Base` (other): other requires complex or non-standard runtime
+- `microsoft/layoutlm-base-cased` (no pipeline): missing pipeline_name
+- `BabyLM-community/babylm-baseline-100m-gpt-bert-mixed` (no pipeline): missing pipeline_name
+- `BabyLM-community/babylm-baseline-100m-gpt-bert-masked-focus` (no pipeline): missing pipeline_name
+- `BabyLM-community/babylm-baseline-10m-gpt-bert-masked-focus` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-mobilevit` (no pipeline): missing pipeline_name
+- `syssec-utd/py310-pylingual-v1-statement` (no pipeline): missing pipeline_name
+- `facebook/mms-300m` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-nanollava` (no pipeline): missing pipeline_name
+- `optimum-intel-internal-testing/tiny-random-resnet` (no pipeline): missing pipeline_name
+- `microsoft/skala-1.1` (no pipeline): missing pipeline_name
+- `katuni4ka/sam-vit-tiny-random-ov` (no pipeline): missing pipeline_name
+- `tencent/Hunyuan3D-2mini` (image-to-3d): image-to-3d requires complex or non-standard runtime
+- `FireRedTeam/FireRed-Image-Edit-1.1` (image-to-image): image-to-image requires complex or non-standard runtime
+- `Uminosachi/realisticVisionV51_v51VAE-inpainting` (text-to-image): text-to-image requires complex or non-standard runtime
+- `koboldcpp/imgmodel` (no pipeline): missing pipeline_name
+- `microsoft/xclip-base-patch32-16-frames` (video-classification): video-classification requires complex or non-standard runtime
+- `Salesforce/moirai-1.1-R-base` (time-series-forecasting): time-series-forecasting requires complex or non-standard runtime
+- `lustlyai/Flux_Lustly.ai_Uncensored_nsfw_v1` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Crownelius/Crow-9B-HERETIC-4.6` (no pipeline): missing pipeline_name
+- `Prior-Labs/tabpfn_2_5` (tabular-classification): tabular-classification requires complex or non-standard runtime
+- `John6666/prefect-illustrious-xl-v15-sdxl` (text-to-image): text-to-image requires complex or non-standard runtime
+- `lilylilith/AnyPose` (image-to-image): image-to-image requires complex or non-standard runtime
+- `1038lab/RMBG-2.0` (no pipeline): missing pipeline_name
+- `DeepBeepMeep/LTX_Video` (no pipeline): missing pipeline_name
+- `Comfy-Org/ACE-Step_ComfyUI_repackaged` (no pipeline): missing pipeline_name
+- `madebyollin/taef1` (no pipeline): missing pipeline_name
+- `cc200188/model_26babyLM_bert_syr3` (no pipeline): missing pipeline_name
+- `nvidia/NV-Generate-CT` (no pipeline): missing pipeline_name
+- `Profluent-Bio/E1-600m` (no pipeline): missing pipeline_name
+- `NemoStation/Marlin-2B` (video-text-to-text): video-text-to-text requires complex or non-standard runtime
+- `SAP/sap-rpt-1-oss` (tabular-classification): tabular-classification requires complex or non-standard runtime
+- `braindecode/cbramod-pretrained` (no pipeline): missing pipeline_name
+- `KittenML/kitten-tts-nano-0.2` (no pipeline): missing pipeline_name
+- `Disty0/FLUX.2-klein-9B-SDNQ-4bit-dynamic-svd-r32` (text-to-image): text-to-image requires complex or non-standard runtime
+- `georgelpreput/jina-embeddings-v5-omni-small-retrieval-NVFP4` (no pipeline): missing pipeline_name
+- `cerspense/zeroscope_v2_576w` (text-to-video): text-to-video requires complex or non-standard runtime
+- `LiconStudio/Ltx2.3-VBVR-lora-I2V` (no pipeline): missing pipeline_name
+- `nvidia/music-flamingo-hf` (audio-text-to-text): audio-text-to-text requires complex or non-standard runtime
+- `alimama-creative/FLUX.1-Turbo-Alpha` (text-to-image): text-to-image requires complex or non-standard runtime
+- `facebook/vit-mae-base` (no pipeline): missing pipeline_name
+- `tarn59/pixel_art_style_lora_z_image_turbo` (text-to-image): text-to-image requires complex or non-standard runtime
+- `apple/DFN2B-CLIP-ViT-L-14` (no pipeline): missing pipeline_name
+- `Aitrepreneur/FLX` (no pipeline): missing pipeline_name
+- `Qdrant/bge-small-zh-v1.5` (no pipeline): missing pipeline_name
+- `peft-internal-testing/gpt2-lora-random` (no pipeline): missing pipeline_name
+- `lukealonso/MiMo-V2.5-NVFP4` (no pipeline): missing pipeline_name
+- `SWivid/Habibi-TTS` (no pipeline): missing pipeline_name
+- `google/switch-base-8` (no pipeline): missing pipeline_name
+- `lpiccinelli/unidepth-v2-vits14` (no pipeline): missing pipeline_name
+- `stabilityai/stable-audio-3-small-music` (text-to-audio): text-to-audio requires complex or non-standard runtime
+- `koboldcpp/music` (no pipeline): missing pipeline_name
+- `fazahmz/nps-tag-classifier` (no pipeline): missing pipeline_name
+- `M-CLIP/XLM-Roberta-Large-Vit-L-14` (no pipeline): missing pipeline_name
+- `rayliuca/coedit-large-onnx` (no pipeline): missing pipeline_name
+- `facebook/audiogen-medium` (no pipeline): missing pipeline_name
+- `lysandre/tiny-bert-random` (no pipeline): missing pipeline_name
+- `tuner007/pegasus_paraphrase` (no pipeline): missing pipeline_name
+- `Mapika/MiniMax-M3-NVFP4` (no pipeline): missing pipeline_name
+- `nvidia/bigvgan_v2_24khz_100band_256x` (audio-to-audio): audio-to-audio requires complex or non-standard runtime
+- `nvidia/Alpamayo-R1-10B` (robotics): robotics requires complex or non-standard runtime
+- `grammarly/coedit-large` (no pipeline): missing pipeline_name
+- `black-forest-labs/FLUX.1-Krea-dev` (text-to-image): text-to-image requires complex or non-standard runtime
+- `Laxhar/noobai-XL-1.0` (text-to-image): text-to-image requires complex or non-standard runtime
+- `lerobot/pi05_libero_finetuned_v044` (robotics): robotics requires complex or non-standard runtime
+- `charsiu/g2p_multilingual_byT5_tiny_16_layers_100` (no pipeline): missing pipeline_name
+- `OpenMOSS-Team/MOSS-TTS-Local-Transformer` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `Prior-Labs/tabpfn_3` (tabular-classification): tabular-classification requires complex or non-standard runtime
+- `braindecode/labram-pretrained` (no pipeline): missing pipeline_name
+- `huggingface/informer-tourism-monthly` (no pipeline): missing pipeline_name
+- `pawin205/misti-specter2` (no pipeline): missing pipeline_name
+- `ragavsachdeva/magiv2` (no pipeline): missing pipeline_name
+- `suno/bark` (text-to-speech): text-to-speech requires complex or non-standard runtime
+- `allenai/scibert_scivocab_cased` (no pipeline): missing pipeline_name
+- `google/umt5-base` (no pipeline): missing pipeline_name
+- `pyannoteAI/parakeet-tdt-0.6b-v3` (no pipeline): missing pipeline_name
+- `frothywater/kanade-12.5hz` (no pipeline): missing pipeline_name
+- `vidore/colpali-v1.3` (visual-document-retrieval): visual-document-retrieval requires complex or non-standard runtime

@@ -12,10 +12,9 @@ python -m pip install \
   "uvicorn[standard]>=0.30.0" \
   "pydantic>=2.0.0"
 
-# Optional runtime variables:
 # MODEL_PATH is optional. By default the service loads the model from this directory.
 # export DEVICE=auto
 # export BATCH_SIZE=8
 #
 # Start service:
-# uvicorn fastapi_app:app --host 0.0.0.0 --port 8000
+# uvicorn fastapi_app:app --host 0.0.0.0 --port 8080

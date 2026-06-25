@@ -15,7 +15,7 @@ class RerankInferencer:
         self.model_name_or_path = model_name_or_path or os.getenv("MODEL_PATH") or os.getenv("MODEL_ID") or DEFAULT_MODEL_PATH
         self.batch_size = batch_size
         self.device = self._resolve_device(device)
-        self.classifier = pipeline("text-classification", model=self.model_name_or_path, tokenizer=self.model_name_or_path, device=self.device, trust_remote_code=True, top_k=None)
+        self.pipe = pipeline("text-classification", model=self.model_name_or_path, device=self.device, trust_remote_code=True, top_k=None)
 
     @staticmethod
     def _resolve_device(device: Optional[str]) -> int:
@@ -35,27 +35,21 @@ class RerankInferencer:
         return float((preferred or labels)[0].get("score", 0.0)) if labels else 0.0
 
     def rank(self, query: str, documents: List[str]) -> List[Dict[str, Any]]:
-        inputs = [{"text": query, "text_pair": document} for document in documents]
-        outputs = self.classifier(inputs, batch_size=self.batch_size, truncation=True)
-        results = [{"document": doc, "score": self._score(out)} for doc, out in zip(documents, outputs)]
+        outputs = self.pipe([{"text": query, "text_pair": d} for d in documents], batch_size=self.batch_size, truncation=True)
+        results = [{"document": d, "score": self._score(o)} for d, o in zip(documents, outputs)]
         results.sort(key=lambda item: item["score"], reverse=True)
         return results
 
 
-def build_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Cross-encoder/reranker inference.")
-    parser.add_argument("--model", default=None)
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Rerank inference.")
+    parser.add_argument("--model", default=None, help="Local model path. Defaults to the directory containing this file.")
     parser.add_argument("--device", default=None)
     parser.add_argument("--query", required=True)
     parser.add_argument("--documents", nargs="+", required=True)
     parser.add_argument("--batch-size", type=int, default=8)
-    return parser
-
-
-def main() -> None:
-    args = build_arg_parser().parse_args()
-    inferencer = RerankInferencer(args.model, args.device, args.batch_size)
-    print(json.dumps({"results": inferencer.rank(args.query, args.documents)}, ensure_ascii=False, indent=2))
+    args = parser.parse_args()
+    print(json.dumps({"results": RerankInferencer(args.model, args.device, args.batch_size).rank(args.query, args.documents)}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

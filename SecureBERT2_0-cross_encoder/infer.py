@@ -1,21 +1,22 @@
 import argparse
 import json
 import os
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 
 import torch
+import torch.nn.functional as F
 from transformers import pipeline
 
 DEFAULT_MODEL_ID = 'cisco-ai/SecureBERT2.0-cross_encoder'
 DEFAULT_MODEL_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
-class RerankInferencer:
+class EmbeddingInferencer:
     def __init__(self, model_name_or_path: Optional[str] = None, device: Optional[str] = None, batch_size: int = 8) -> None:
         self.model_name_or_path = model_name_or_path or os.getenv("MODEL_PATH") or os.getenv("MODEL_ID") or DEFAULT_MODEL_PATH
         self.batch_size = batch_size
         self.device = self._resolve_device(device)
-        self.classifier = pipeline("text-classification", model=self.model_name_or_path, tokenizer=self.model_name_or_path, device=self.device, trust_remote_code=True, top_k=None)
+        self.extractor = pipeline("feature-extraction", model=self.model_name_or_path, tokenizer=self.model_name_or_path, device=self.device, trust_remote_code=True)
 
     @staticmethod
     def _resolve_device(device: Optional[str]) -> int:
@@ -28,34 +29,25 @@ class RerankInferencer:
             return int(requested.split(":", 1)[1]) if ":" in requested else 0
         return int(requested)
 
-    @staticmethod
-    def _score(item: Any) -> float:
-        labels = item if isinstance(item, list) else [item]
-        preferred = [x for x in labels if str(x.get("label", "")).upper() in {"LABEL_1", "POSITIVE", "RELEVANT"}]
-        return float((preferred or labels)[0].get("score", 0.0)) if labels else 0.0
-
-    def rank(self, query: str, documents: List[str]) -> List[Dict[str, Any]]:
-        inputs = [{"text": query, "text_pair": document} for document in documents]
-        outputs = self.classifier(inputs, batch_size=self.batch_size, truncation=True)
-        results = [{"document": doc, "score": self._score(out)} for doc, out in zip(documents, outputs)]
-        results.sort(key=lambda item: item["score"], reverse=True)
-        return results
-
-
-def build_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Cross-encoder/reranker inference.")
-    parser.add_argument("--model", default=None)
-    parser.add_argument("--device", default=None)
-    parser.add_argument("--query", required=True)
-    parser.add_argument("--documents", nargs="+", required=True)
-    parser.add_argument("--batch-size", type=int, default=8)
-    return parser
+    def encode(self, texts: List[str], normalize: bool = True) -> List[List[float]]:
+        outputs = self.extractor(texts, padding=True, truncation=True, batch_size=self.batch_size, return_tensors=True)
+        hidden = torch.as_tensor(outputs)
+        tokenized = self.extractor.tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
+        mask = tokenized["attention_mask"].unsqueeze(-1).to(hidden.dtype)
+        pooled = (hidden * mask).sum(dim=1) / mask.sum(dim=1).clamp(min=1.0)
+        if normalize:
+            pooled = F.normalize(pooled, p=2, dim=-1)
+        return pooled.detach().cpu().tolist()
 
 
 def main() -> None:
-    args = build_arg_parser().parse_args()
-    inferencer = RerankInferencer(args.model, args.device, args.batch_size)
-    print(json.dumps({"results": inferencer.rank(args.query, args.documents)}, ensure_ascii=False, indent=2))
+    parser = argparse.ArgumentParser(description="Embedding inference.")
+    parser.add_argument("--model", default=None, help="Local model path. Defaults to the directory containing this file.")
+    parser.add_argument("--device", default=None)
+    parser.add_argument("--texts", nargs="+", required=True)
+    parser.add_argument("--batch-size", type=int, default=8)
+    args = parser.parse_args()
+    print(json.dumps({"embeddings": EmbeddingInferencer(args.model, args.device, args.batch_size).encode(args.texts)}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

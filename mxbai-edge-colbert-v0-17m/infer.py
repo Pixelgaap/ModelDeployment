@@ -1,7 +1,7 @@
 import argparse
 import json
 import os
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 
 import torch
 import torch.nn.functional as F
@@ -30,8 +30,6 @@ class EmbeddingInferencer:
         return int(requested)
 
     def encode(self, texts: List[str], normalize: bool = True) -> List[List[float]]:
-        if not texts:
-            return []
         outputs = self.extractor(texts, padding=True, truncation=True, batch_size=self.batch_size, return_tensors=True)
         hidden = torch.as_tensor(outputs)
         tokenized = self.extractor.tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
@@ -41,30 +39,15 @@ class EmbeddingInferencer:
             pooled = F.normalize(pooled, p=2, dim=-1)
         return pooled.detach().cpu().tolist()
 
-    def similarity(self, query: str, documents: List[str]) -> List[Dict[str, Any]]:
-        vectors = torch.tensor(self.encode([query] + documents, normalize=True))
-        query_vector = vectors[0]
-        results = [{"document": doc, "score": float(torch.dot(query_vector, vec).item())} for doc, vec in zip(documents, vectors[1:])]
-        results.sort(key=lambda item: item["score"], reverse=True)
-        return results
-
-
-def build_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Embedding inference and similarity ranking.")
-    parser.add_argument("--model", default=None)
-    parser.add_argument("--device", default=None)
-    parser.add_argument("--texts", nargs="+")
-    parser.add_argument("--query")
-    parser.add_argument("--documents", nargs="+")
-    parser.add_argument("--batch-size", type=int, default=8)
-    return parser
-
 
 def main() -> None:
-    args = build_arg_parser().parse_args()
-    inferencer = EmbeddingInferencer(args.model, args.device, args.batch_size)
-    payload = {"results": inferencer.similarity(args.query, args.documents)} if args.query and args.documents else {"embeddings": inferencer.encode(args.texts or ["hello world"])}
-    print(json.dumps(payload, ensure_ascii=False, indent=2))
+    parser = argparse.ArgumentParser(description="Embedding inference.")
+    parser.add_argument("--model", default=None, help="Local model path. Defaults to the directory containing this file.")
+    parser.add_argument("--device", default=None)
+    parser.add_argument("--texts", nargs="+", required=True)
+    parser.add_argument("--batch-size", type=int, default=8)
+    args = parser.parse_args()
+    print(json.dumps({"embeddings": EmbeddingInferencer(args.model, args.device, args.batch_size).encode(args.texts)}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
