@@ -43,7 +43,7 @@ components:
         device: {type: string, example: auto}
     InferenceRequest:
       type: object
-      description: Request body depends on the model task. See fastapi_app.py for exact validation fields.
+      description: "Request body accepts one audio input: audio_base64, audio_url, or server-local audio_path. Data URLs are accepted for audio_base64."
     InferenceResponse:
       type: object
       required: [result]

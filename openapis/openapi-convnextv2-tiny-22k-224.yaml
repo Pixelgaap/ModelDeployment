@@ -43,7 +43,7 @@ components:
         device: {type: string, example: auto}
     InferenceRequest:
       type: object
-      description: Request body depends on the model task. See fastapi_app.py for exact validation fields.
+      description: "Request body accepts one image input: image_base64, image_url, or server-local image_path. Data URLs are accepted for image_base64."
     InferenceResponse:
       type: object
       required: [result]

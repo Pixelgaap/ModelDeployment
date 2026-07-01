@@ -10,7 +10,8 @@ python -m pip install \
   "accelerate>=0.30.0" \
   "fastapi>=0.111.0" \
   "uvicorn[standard]>=0.30.0" \
-  "pydantic>=2.0.0"
+  "pydantic>=2.0.0" \
+  "pillow>=10.0.0"
 
 # MODEL_PATH is optional. By default the service loads the model from this directory.
 # export DEVICE=auto

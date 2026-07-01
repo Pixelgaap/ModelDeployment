@@ -1,127 +1,69 @@
 openapi: 3.0.3
 info:
-  title: Nanonets-OCR2-3B 模型服务 API
-  description: 基于Nanonets-OCR2-3B模型的OCR文本识别服务，支持图像转文本功能
+  title: Nanonets-OCR2-3B API
   version: 1.0.0
+  description: API for OCR image-to-text inference.
 servers:
   - url: http://localhost:8080
-    description: 本地开发服务器
 paths:
   /health:
     get:
-      summary: 健康检查
-      description: 检查服务状态和模型加载情况
-      tags:
-        - 健康检查
+      summary: Health check
       responses:
-        '200':
-          description: 服务正常
+        "200":
+          description: Service is healthy.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HealthResponse'
-        '503':
-          description: 服务不可用
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  detail:
-                    type: string
-                    example: "模型未加载"
+                $ref: "#/components/schemas/HealthResponse"
   /predict:
     post:
-      summary: OCR文本识别
-      description: 上传图像文件，返回识别出的文本内容
-      tags:
-        - OCR识别
+      summary: Run OCR inference
       requestBody:
         required: true
         content:
-          multipart/form-data:
+          application/json:
             schema:
-              type: object
-              properties:
-                image:
-                  type: string
-                  format: binary
-                  description: 待识别的图像文件（支持JPG、PNG等格式）
-                max_new_tokens:
-                  type: integer
-                  default: 512
-                  description: 生成文本的最大长度
-                  minimum: 1
-                  maximum: 2048
+              $ref: "#/components/schemas/OCRRequest"
       responses:
-        '200':
-          description: 识别成功
+        "200":
+          description: OCR result.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/OCRResponse'
-        '400':
-          description: 请求参数错误
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  detail:
-                    type: string
-        '500':
-          description: 服务器内部错误
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  detail:
-                    type: string
-                    example: "推理失败: [错误信息]"
-        '503':
-          description: 服务不可用
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  detail:
-                    type: string
-                    example: "模型未加载"
+                $ref: "#/components/schemas/OCRResponse"
 components:
   schemas:
     HealthResponse:
       type: object
+      required: [status, model, device, gpu_available]
       properties:
-        status:
+        status: {type: string, example: healthy}
+        model: {type: string, example: nanonets/Nanonets-OCR2-3B}
+        device: {type: string, example: cuda:0}
+        gpu_available: {type: boolean, example: true}
+    OCRRequest:
+      type: object
+      description: "Provide exactly one image input: image_base64, image_url, or server-local image_path."
+      properties:
+        image_path:
           type: string
-          description: 服务状态
-          example: "healthy"
-        model:
+          description: Server-local image path.
+        image_base64:
           type: string
-          description: 模型名称
-          example: "nanonets/Nanonets-OCR2-3B"
-        device:
+          description: Base64 image bytes. Data URLs are accepted.
+        image_url:
           type: string
-          description: 当前使用的设备
-          example: "cuda:0"
-        gpu_available:
-          type: boolean
-          description: 是否有可用的GPU
-          example: true
+          description: HTTP/HTTPS image URL reachable from the server.
+        max_new_tokens:
+          type: integer
+          default: 512
+          minimum: 1
+          maximum: 2048
     OCRResponse:
       type: object
+      required: [success, text, model]
       properties:
-        success:
-          type: boolean
-          description: 请求是否成功
-          example: true
-        text:
-          type: string
-          description: 识别出的文本内容
-          example: "Hello, World!"
-        model:
-          type: string
-          description: 使用的模型名称
-          example: "nanonets/Nanonets-OCR2-3B"
+        success: {type: boolean, example: true}
+        text: {type: string}
+        model: {type: string, example: nanonets/Nanonets-OCR2-3B}

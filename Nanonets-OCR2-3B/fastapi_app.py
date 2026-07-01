@@ -1,9 +1,13 @@
 import argparse
+import base64
 import io
 import os
+import urllib.request
+from typing import Optional
+
 from PIL import Image
-from fastapi import FastAPI, File, UploadFile, HTTPException, Query
-from pydantic import BaseModel
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
 from transformers import pipeline
 
 app = FastAPI(title="Nanonets-OCR2-3B 模型服务", version="1.0.0", description="基于Nanonets-OCR2-3B模型的OCR文本识别服务")
@@ -23,6 +27,42 @@ class OCRResponse(BaseModel):
     success: bool
     text: str
     model: str
+
+
+class OCRRequest(BaseModel):
+    image_path: Optional[str] = Field(
+        None,
+        min_length=1,
+        description="Server-local image path. Use image_base64 or image_url for remote API calls.",
+    )
+    image_base64: Optional[str] = Field(
+        None,
+        min_length=1,
+        description="Base64 image bytes. Data URLs are accepted.",
+    )
+    image_url: Optional[str] = Field(
+        None,
+        min_length=1,
+        description="HTTP/HTTPS image URL reachable from the server.",
+    )
+    max_new_tokens: int = Field(512, ge=1, le=2048)
+
+
+def _decode_data_url(value: str) -> bytes:
+    payload = value.split(",", 1)[1] if "," in value and value.lstrip().startswith("data:") else value
+    return base64.b64decode(payload)
+
+
+def _load_image(request: OCRRequest) -> Image.Image:
+    provided = [value for value in (request.image_path, request.image_base64, request.image_url) if value]
+    if len(provided) != 1:
+        raise ValueError("Exactly one of image_path, image_base64, or image_url must be provided.")
+    if request.image_path:
+        return Image.open(request.image_path).convert("RGB")
+    if request.image_base64:
+        return Image.open(io.BytesIO(_decode_data_url(request.image_base64))).convert("RGB")
+    with urllib.request.urlopen(request.image_url, timeout=30) as response:
+        return Image.open(io.BytesIO(response.read())).convert("RGB")
 
 
 @app.on_event("startup")
@@ -60,18 +100,13 @@ async def health_check():
 
 
 @app.post("/predict", response_model=OCRResponse, tags=["OCR识别"])
-async def ocr_inference(
-    image: UploadFile = File(..., description="待识别的图像文件"),
-    max_new_tokens: int = Query(512, description="生成文本的最大长度")
-):
+async def ocr_inference(request: OCRRequest):
     if pipe is None:
         raise HTTPException(status_code=503, detail="模型未加载")
 
     try:
-        image_bytes = await image.read()
-        image_pil = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-
-        result = pipe(image_pil, max_new_tokens=max_new_tokens)
+        image_pil = _load_image(request)
+        result = pipe(image_pil, max_new_tokens=request.max_new_tokens)
 
         if isinstance(result, list) and len(result) > 0:
             text = result[0].get("generated_text", "") if isinstance(result[0], dict) else str(result[0])
@@ -83,6 +118,8 @@ async def ocr_inference(
             text=text,
             model="nanonets/Nanonets-OCR2-3B"
         )
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"推理失败: {str(e)}")
 
